@@ -1,0 +1,16 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+
+# Data
+data/*/*.json
+data/*/*.ndjson
+
+# Packaging
+*.egg-info/
