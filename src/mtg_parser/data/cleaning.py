@@ -1,3 +1,7 @@
+"""mtg-mechanics-parser data cleaning script.
+
+Takes the creatures-full dataset and cleans it for analysis."""
+
 import pandas as pd
 
 # Define features we are interested in
@@ -30,10 +34,16 @@ def build_clean_dataset(
     combined_points = combined_points[POINTS_COLS]
 
     # Remove duplicates
-    creatures_full = creatures_full.drop_duplicates(
-        subset=['name', 'set']
+    creatures_full['arena_priority'] = (
+        creatures_full['arena_id'].notna().astype(int)
     )
-    
+
+    creatures_full = creatures_full.sort_values(by='arena_priority')
+
+    creatures_full = creatures_full.drop_duplicates(
+        subset=['name', 'set'], keep='first'
+    )
+
     creatures_subset = creatures_full[SCRYFALL_COLS]
 
     # Merge
@@ -84,14 +94,13 @@ def build_clean_dataset(
     missing = merged['oracle_id'].isna().sum()
 
     print(f'[cleaning] Missing oracle_id rows: {missing}')
-    
-    dupes = merged.duplicated(
-        subset=['name', 'set']
-    ).sum()
-    
+
+    dupes = merged.duplicated(subset=['name', 'set']).sum()
+
     print(f'[cleaning] Duplicate values in rows: {dupes}')
 
     return merged
+
 
 if __name__ == '__main__':
     build_clean_dataset()

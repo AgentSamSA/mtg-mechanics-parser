@@ -1,3 +1,8 @@
+"""mtg-mechanics-parser download script.
+
+Fetches the default-cards JSON file from the Scryfall API and downloads it."""
+
+
 import requests
 from mtg_parser.utils.paths import RAW_DIR
 
