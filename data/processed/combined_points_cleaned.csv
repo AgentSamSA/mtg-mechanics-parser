@@ -700,7 +700,7 @@ Evoke {3}{B} (You may cast this spell for its evoke cost. If you do, it's sacrif
 Tap two untapped Merfolk you control: Untap this creature. It gains shroud until end of turn. (It can't be the target of spells or abilities.)",['U'],uncommon,18
 7e523d42-c7d8-47d1-8874-230920f03345,Hearthcage Giant,lrw,Lorwyn,2007-10-12,2007,8.0,5,5,5.0,5.0,[],"When this creature enters, create two 3/1 red Elemental Shaman creature tokens.
 Sacrifice an Elemental: Target Giant creature gets +3/+1 until end of turn.",['R'],uncommon,22
-acff2573-cf8a-4aee-96a3-28721a4128f6,Mardu Hateblade,ktk,Khans of Tarkir,2023-12-12,2023,1.0,1,1,1.0,1.0,[],{B}: This creature gains deathtouch until end of turn. (Any amount of damage it deals to a creature is enough to destroy it.),"['B', 'W']",common,4
+acff2573-cf8a-4aee-96a3-28721a4128f6,Mardu Hateblade,ktk,Khans of Tarkir,2014-09-26,2014,1.0,1,1,1.0,1.0,[],{B}: This creature gains deathtouch until end of turn. (Any amount of damage it deals to a creature is enough to destroy it.),"['B', 'W']",common,4
 192603a4-720e-4c53-bee5-4f2826c1ed7f,Disowned Ancestor,ktk,Khans of Tarkir,2014-09-26,2014,1.0,0,4,0.0,4.0,['Outlast'],"Outlast {1}{B} ({1}{B}, {T}: Put a +1/+1 counter on this creature. Outlast only as a sorcery.)",['B'],common,6
 cad09970-14c8-4d80-82fe-6c855efb0191,Bloodsoaked Champion,ktk,Khans of Tarkir,2014-09-26,2014,1.0,2,1,2.0,1.0,['Raid'],"This creature can't block.
 Raid — {1}{B}: Return this card from your graveyard to the battlefield. Activate only if you attacked this turn.",['B'],rare,5
@@ -763,13 +763,13 @@ When this creature is turned face up, target creature gains trample until end of
 448c84f9-712b-4970-8719-2ab9c2a59d20,War-Name Aspirant,ktk,Khans of Tarkir,2014-09-26,2014,2.0,2,1,2.0,1.0,['Raid'],"Raid — This creature enters with a +1/+1 counter on it if you attacked this turn.
 This creature can't be blocked by creatures with power 1 or less.",['R'],uncommon,6
 2c47319a-4062-4aec-b68a-e8e8f023cf86,Bloodfire Mentor,ktk,Khans of Tarkir,2014-09-26,2014,3.0,0,5,0.0,5.0,[],"{2}{U}, {T}: Draw a card, then discard a card.","['R', 'U']",common,6
-352844c5-2160-4787-97f1-9cd0fed060eb,Mardu Blazebringer,ktk,Khans of Tarkir,2023-12-12,2023,3.0,4,4,4.0,4.0,[],"When this creature attacks or blocks, sacrifice it at end of combat.",['R'],uncommon,9
+352844c5-2160-4787-97f1-9cd0fed060eb,Mardu Blazebringer,ktk,Khans of Tarkir,2014-09-26,2014,3.0,4,4,4.0,4.0,[],"When this creature attacks or blocks, sacrifice it at end of combat.",['R'],uncommon,9
 aa149597-087a-4e1f-953c-2cd04e90a93b,Tuskguard Captain,ktk,Khans of Tarkir,2014-09-26,2014,3.0,2,3,2.0,3.0,['Outlast'],"Outlast {G} ({G}, {T}: Put a +1/+1 counter on this creature. Outlast only as a sorcery.)
 Each creature you control with a +1/+1 counter on it has trample.",['G'],uncommon,9
 92cf18ab-dd7b-4bc8-8b85-a81b8cb5192c,Watcher of the Roost,ktk,Khans of Tarkir,2014-09-26,2014,3.0,2,1,2.0,1.0,"['Flying', 'Morph']","Flying
 Morph—Reveal a white card in your hand. (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)
 When this creature is turned face up, you gain 2 life.",['W'],uncommon,6
-72aef1d8-11df-4bc2-af83-907b05df73a8,Grim Haruspex,ktk,Khans of Tarkir,2023-12-12,2023,3.0,3,2,3.0,2.0,['Morph'],"Morph {B} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)
+72aef1d8-11df-4bc2-af83-907b05df73a8,Grim Haruspex,ktk,Khans of Tarkir,2014-09-26,2014,3.0,3,2,3.0,2.0,['Morph'],"Morph {B} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)
 Whenever another nontoken creature you control dies, draw a card.",['B'],rare,8
 86e3c86c-d50e-4aa9-b080-f68b6afee87c,Alpine Grizzly,ktk,Khans of Tarkir,2014-09-26,2014,3.0,4,2,4.0,2.0,[],,['G'],common,7
 ebfafabc-5255-4024-be59-7403bdb16ee4,"Anafenza, the Foremost",ktk,Khans of Tarkir,2014-09-26,2014,3.0,4,4,4.0,4.0,[],"Whenever Anafenza attacks, put a +1/+1 counter on another target tapped creature you control.
@@ -793,7 +793,7 @@ Prowess (Whenever you cast a noncreature spell, this creature gets +1/+1 until e
 9af9c353-6b71-46e7-8815-a920e012dbb8,Mistfire Weaver,ktk,Khans of Tarkir,2014-09-26,2014,4.0,3,1,3.0,1.0,"['Flying', 'Morph']","Flying
 Morph {2}{U} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)
 When this creature is turned face up, target creature you control gains hexproof until end of turn.",['U'],uncommon,8
-3fad7072-21e3-446e-a28f-615038c8bfea,"Sidisi, Brood Tyrant",ktk,Khans of Tarkir,2023-12-12,2023,4.0,3,3,3.0,3.0,['Mill'],"Whenever Sidisi enters or attacks, mill three cards.
+3fad7072-21e3-446e-a28f-615038c8bfea,"Sidisi, Brood Tyrant",ktk,Khans of Tarkir,2014-09-26,2014,4.0,3,3,3.0,3.0,['Mill'],"Whenever Sidisi enters or attacks, mill three cards.
 Whenever one or more creature cards are put into your graveyard from your library, create a 2/2 black Zombie creature token.","['B', 'G', 'U']",mythic,13
 1ff93e62-6ae0-4438-a88e-ae6fd7d91e41,Butcher of the Horde,ktk,Khans of Tarkir,2014-09-26,2014,4.0,5,4,5.0,4.0,['Flying'],"Flying
 Sacrifice another creature: This creature gains your choice of vigilance, lifelink, or haste until end of turn.","['B', 'R', 'W']",rare,14
@@ -855,7 +855,7 @@ ccad8b03-5ff1-4895-94e0-0c96883cb875,Avalanche Tusker,ktk,Khans of Tarkir,2014-0
 589d1c6e-5808-424c-a6e4-dadef90d119e,Sage-Eye Harrier,ktk,Khans of Tarkir,2014-09-26,2014,5.0,1,5,1.0,5.0,"['Flying', 'Morph']","Flying
 Morph {3}{W} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)",['W'],common,8
 10ae7744-5f98-4d6f-993a-ffb2a34b23e7,Ivorytusk Fortress,ktk,Khans of Tarkir,2014-09-26,2014,5.0,5,7,5.0,7.0,[],Untap each creature you control with a +1/+1 counter on it during each other player's untap step.,"['B', 'G', 'W']",rare,16
-767e4aa9-527f-425f-bffb-6d842e1fbb74,Swarm of Bloodflies,ktk,Khans of Tarkir,2023-12-12,2023,5.0,0,0,0.0,0.0,['Flying'],"Flying
+767e4aa9-527f-425f-bffb-6d842e1fbb74,Swarm of Bloodflies,ktk,Khans of Tarkir,2014-09-26,2014,5.0,0,0,0.0,0.0,['Flying'],"Flying
 This creature enters with two +1/+1 counters on it.
 Whenever another creature dies, put a +1/+1 counter on this creature.",['B'],uncommon,5
 4c92b862-34c7-4195-bee3-bcc0cafad140,Pine Walker,ktk,Khans of Tarkir,2014-09-26,2014,5.0,5,5,5.0,5.0,['Morph'],"Morph {4}{G} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)
@@ -884,7 +884,7 @@ Morph {4}{R} (You may cast this card face down as a 2/2 creature for {3}. Turn i
 bba11c0e-01a3-45ad-8de4-2148cf660ba8,Tusked Colossodon,ktk,Khans of Tarkir,2014-09-26,2014,6.0,6,5,6.0,5.0,[],,['G'],common,13
 85b2fb89-5ebe-4c13-bc12-38d1417e5880,Abzan Guide,ktk,Khans of Tarkir,2014-09-26,2014,6.0,4,4,4.0,4.0,"['Lifelink', 'Morph']","Lifelink (Damage dealt by this creature also causes you to gain that much life.)
 Morph {2}{W}{B}{G} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)","['B', 'G', 'W']",common,11
-3d5a753b-ed2d-4646-ade3-5daeba2a7270,Snowhorn Rider,ktk,Khans of Tarkir,2023-12-12,2023,6.0,5,5,5.0,5.0,"['Morph', 'Trample']","Trample
+3d5a753b-ed2d-4646-ade3-5daeba2a7270,Snowhorn Rider,ktk,Khans of Tarkir,2014-09-26,2014,6.0,5,5,5.0,5.0,"['Morph', 'Trample']","Trample
 Morph {2}{G}{U}{R} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)","['G', 'R', 'U']",common,14
 7e4cbfd1-2393-4643-bc05-022d06b30210,Kheru Lich Lord,ktk,Khans of Tarkir,2014-09-26,2014,6.0,4,4,4.0,4.0,[],"At the beginning of your upkeep, you may pay {2}{B}. If you do, return a creature card at random from your graveyard to the battlefield. It gains flying, trample, and haste. Exile that card at the beginning of your next end step. If it would leave the battlefield, exile it instead of putting it anywhere else.","['B', 'G', 'U']",rare,11
 f9221367-24a5-41a3-8943-c6a3cb5d605d,Riverwheel Aerialists,ktk,Khans of Tarkir,2014-09-26,2014,6.0,4,5,4.0,5.0,"['Flying', 'Prowess']","Flying
@@ -1148,7 +1148,7 @@ Flash
 Whenever this creature mutates, you may return target creature an opponent controls to its owner's hand.",['U'],uncommon,12
 f0587c55-06c1-4930-a62e-668f37464ce9,"Jegantha, the Wellspring",iko,Ikoria: Lair of Behemoths,2020-04-24,2020,5.0,5,5,5.0,5.0,['Companion'],"Companion — No card in your starting deck has more than one of the same mana symbol in its mana cost. (If this card is your chosen companion, you may put it into your hand from outside the game for {3} as a sorcery.)
 {T}: Add {W}{U}{B}{R}{G}. This mana can't be spent to pay generic mana costs.","['B', 'G', 'R', 'U', 'W']",rare,19
-2dba8d8d-891e-482e-8014-879f701d0619,"Zilortha, Strength Incarnate",iko,Ikoria: Lair of Behemoths,2022-01-01,2022,5.0,7,3,7.0,3.0,['Trample'],"Trample
+2dba8d8d-891e-482e-8014-879f701d0619,"Zilortha, Strength Incarnate",iko,Ikoria: Lair of Behemoths,2020-04-24,2020,5.0,7,3,7.0,3.0,['Trample'],"Trample
 Lethal damage dealt to creatures you control is determined by their power rather than their toughness.","['G', 'R']",mythic,15
 e15504a7-2b67-4185-b916-172145f10b19,"Yorion, Sky Nomad",iko,Ikoria: Lair of Behemoths,2020-04-24,2020,5.0,4,5,4.0,5.0,"['Flying', 'Companion']","Companion — Your starting deck contains at least twenty cards more than the minimum deck size. (If this card is your chosen companion, you may put it into your hand from outside the game for {3} as a sorcery.)
 Flying

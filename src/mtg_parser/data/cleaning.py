@@ -33,12 +33,18 @@ def build_clean_dataset(
 
     combined_points = combined_points[POINTS_COLS]
 
-    # Remove duplicates
+    # Remove duplicates and ensure earliest version of the card for each set
     creatures_full['arena_priority'] = (
         creatures_full['arena_id'].notna().astype(int)
     )
 
-    creatures_full = creatures_full.sort_values(by='arena_priority')
+    creatures_full['released_at'] = pd.to_datetime(
+        creatures_full['released_at'], errors='coerce'
+    )
+
+    creatures_full = creatures_full.sort_values(
+        by=['arena_priority', 'released_at']
+    )
 
     creatures_full = creatures_full.drop_duplicates(
         subset=['name', 'set'], keep='first'
@@ -46,7 +52,7 @@ def build_clean_dataset(
 
     creatures_subset = creatures_full[SCRYFALL_COLS]
 
-    # Merge
+    # Merge datasets
     merged = combined_points.merge(
         creatures_subset,
         on=['name', 'set'],
@@ -55,11 +61,7 @@ def build_clean_dataset(
 
     merged['oracle_text'] = merged['oracle_text'].fillna('')
 
-    # Convert to dates
-    merged['released_at'] = pd.to_datetime(
-        merged['released_at'], errors='coerce'
-    )
-
+    # Add the release year to each card
     merged['year'] = merged['released_at'].dt.year
 
     # Get numeric power/toughness values
