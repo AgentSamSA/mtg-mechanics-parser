@@ -23,8 +23,8 @@ pip install -e .
   - [ ] Trend fitting over time (set/year)
 
 ## Architecture
-`Src/mtg_parser`
+`src/mtg_parser`
 - [x] `data` pipeline
 - [ ] `parser`
-- [ ] 'scorer'
-- [x] `utils'
+- [ ] `scorer`
+- [x] `utils`
