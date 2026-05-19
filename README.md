@@ -8,8 +8,8 @@ pip install -e .
 ```
 
 ## Completed
-- [ ] Initial repository setup
-- [ ] Data pipeline built
+- [x] Initial repository setup
+- [x] Data pipeline built
 
 ## TODO
 - [ ] Modify existing criteria into more formal structures
@@ -24,7 +24,7 @@ pip install -e .
 
 ## Architecture
 `Src/mtg_parser`
-- [ ] `data` pipeline
+- [x] `data` pipeline
 - [ ] `parser`
 - [ ] 'scorer'
-- [ ] `utils'
+- [x] `utils'
