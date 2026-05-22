@@ -14,7 +14,7 @@ def save_cleaned_dataset():
 
     merged.to_csv(PROCESSED_DIR / 'combined_points_cleaned.csv', index=False)
 
-    print('Saved combined_points_cleaned.csv to ./data/processed')
+    print('Saved combined_points_cleaned.csv to /data/processed/')
     
 if __name__ == '__main__':
     save_cleaned_dataset()
