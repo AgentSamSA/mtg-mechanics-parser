@@ -2,6 +2,7 @@
 
 Tranforms Scryfall keyword data to one-hot encoded features."""
 
+
 from mtg_parser.constants.mechanics import ABILITY_WORDS
 from mtg_parser.utils.normalizer import normalize_keyword
 

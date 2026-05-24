@@ -2,6 +2,7 @@
 
 Normalize keyword text to help obtain canonical text form."""
 
+
 import re
 
 def normalize_keyword(text: str) -> str:
