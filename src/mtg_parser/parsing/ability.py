@@ -2,6 +2,7 @@
 
 Takes oracle text and extracts activated, triggered, and static abilities."""
 
+
 import re
 from dataclasses import dataclass
 from typing import Optional

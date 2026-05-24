@@ -3,6 +3,7 @@
 Finds each card with the typeline 'Creature' from the default-cards dataset
 and returns a new dataset with only those cards."""
 
+
 import os
 import sys
 import json

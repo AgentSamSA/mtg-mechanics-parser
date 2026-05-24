@@ -2,6 +2,7 @@
 
 Cleans and normalizes oracle text before parsing."""
 
+
 import re
 
 def fix_encoding(text: str) -> str:
