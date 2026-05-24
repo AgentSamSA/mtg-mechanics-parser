@@ -2,48 +2,47 @@
 
 Tranforms Scryfall keyword data to one-hot encoded features."""
 
+from mtg_parser.constants.mechanics import ABILITY_WORDS
+from mtg_parser.utils.normalizer import normalize_keyword
+
 # Get all keywords present in the dataset
-def get_all_keywords(df):
+def get_true_keywords(df):
     keyword_set = set()
 
     for keywords in df['keywords']:
-        if isinstance(keywords, list):
-            for keyword in keywords:
-                keyword_set.add(keyword)
 
-    keyword_set = sorted(keyword_set)
+        if not isinstance(keywords, list):
+            continue
 
-    return keyword_set
+        for keyword in keywords:
 
+            clean_keyword = normalize_keyword(keyword)
 
-# Normalize keywords
-def normalize_keyword(k: str) -> str:
-    return k.lower().replace(' ', '_')
+            if clean_keyword not in ABILITY_WORDS:
+                keyword_set.add(clean_keyword)
 
+    return sorted(keyword_set)
 
 # Build one-hot columns for keywords
 def build_keyword_columns(df, keyword_list):
     df = df.copy()
 
-    df['keywords_normalized'] = df['keywords'].apply(
+    df['_normalized_keywords'] = df['keywords'].apply(
         lambda x: [normalize_keyword(k) for k in x]
         if isinstance(x, list)
         else []
     )
 
     for keyword in keyword_list:
-        clean_keyword = normalize_keyword(keyword)
-        col = f'has_{clean_keyword}'
+        col = f'has_{keyword}'
 
-        df[col] = df['keywords_normalized'].apply(
-            lambda x: int(clean_keyword in x)
-        )
+        df[col] = df['_normalized_keywords'].apply(lambda x: int(keyword in x))
 
     return df
 
 
 def process_keywords(df):
-    keywords = get_all_keywords(df)
+    keywords = get_true_keywords(df)
 
     return build_keyword_columns(df, keywords)
 
