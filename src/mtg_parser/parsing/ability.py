@@ -20,7 +20,8 @@ class Ability:
     type: AbilityType
     raw: str
     
-    source: Optional[str] = None
+    condition: Optional[str] = None
+    cost: Optional[str] = None
     effect: Optional[str] = None
     
 
@@ -32,7 +33,7 @@ def parse_ability(block: str) -> Ability:
         cost, effect = block.split(':', 1)
         return Ability(
             type=AbilityType.ACTIVATED,
-            source=cost.strip(),
+            cost=cost.strip(),
             effect=effect.strip(),
             raw=block
         )
@@ -46,7 +47,7 @@ def parse_ability(block: str) -> Ability:
         
         return Ability(
             type=AbilityType.TRIGGERED,
-            source=trigger.strip(),
+            condition=trigger.strip(),
             effect=effect.strip(),
             raw=block
         )
