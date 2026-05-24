@@ -3,7 +3,7 @@
 Lexer to split unstructured oracle text into ability blocks
 to parse specific ability types."""
 
-from mtg_parser.parsing.preprocess import preprocess_oracle_text
+from mtg_parser.utils.text_preprocessing import preprocess_oracle_text
 
 # Extract ability blocks from the oracle text
 def extract_blocks(text: str):

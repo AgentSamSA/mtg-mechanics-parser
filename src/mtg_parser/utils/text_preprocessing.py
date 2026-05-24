@@ -4,20 +4,6 @@ Cleans and normalizes oracle text before parsing."""
 
 import re
 
-# ABILITY_WORD_RE = re.compile(r"^([A-Za-z0-9' ]+)\s+—\s*")
-
-# # Extract ability words from oracle text
-# def extract_ability_word(text):
-#     match = ABILITY_WORD_RE.match(text)
-#     if match:
-#         return match.group(1).strip()
-#     return None
-
-# # remove ability word prefix
-# def strip_ability_word(text: str):
-#     return ABILITY_WORD_RE.sub('', text)
-
-# Fix oracle text encoding issues
 def fix_encoding(text: str) -> str:
     return (
         text.replace('â€”', '—')
