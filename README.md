@@ -26,5 +26,5 @@ pip install -e .
 `src/mtg_parser`
 - [x] `data` pipeline
 - [ ] `parser`
-- [ ] `scorer`
+- [x] `scorer` (initial version: P/T + keywords; oracle-text scoring is a placeholder until the parser lands)
 - [x] `utils`

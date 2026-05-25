@@ -20,7 +20,7 @@ def build_creatures_dataset():
         print('[pipeline] Default-cards dataset not found. Downloading...')
     
         try:
-            from data.download import download_data
+            from mtg_parser.data.download import download_data
             download_data()
         except Exception as e:
             print('[pipeline] Download failed:', e)

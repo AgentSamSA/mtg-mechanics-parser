@@ -103,7 +103,3 @@ def build_clean_dataset(
     print(f'[cleaning] Duplicate values in rows: {dupes}')
 
     return merged
-
-
-if __name__ == '__main__':
-    build_clean_dataset()
