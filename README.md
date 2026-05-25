@@ -12,10 +12,11 @@ pip install -e .
 - [x] Data pipeline built
 
 ## TODO
-- [ ] Modify existing criteria into more formal structures
-- [ ] Convert orcale text into structured mechanics/features
-- [ ] Construct mechanics vectors from our structured mechanics
-- [ ] Translate rubric into code to apply mechanics vectors to our dataset
+- [X] Modify existing criteria into more formal structures
+- [X] Convert orcale text into structured mechanics/features
+- [X] Construct mechanics vectors from our structured mechanics
+- [X] Translate rubric into code to apply mechanics vectors to our dataset
+- [ ] Test built components (data pipeline/parser/feature builder/scorer)
 - [ ] Evaluate automated scores against manual scores
 - [ ] Perform modeling with our automated structure and expand the dataset
   - [ ] Polynomial regression
@@ -24,7 +25,7 @@ pip install -e .
 
 ## Architecture
 `src/mtg_parser`
-- [x] `data` pipeline
-- [ ] `parser`
+- [x] `data`
+- [X] `parser` (Criteria fully implemented via feature extractors)
 - [x] `scorer` (initial version: P/T + keywords; oracle-text scoring is a placeholder until the parser lands)
 - [x] `utils`
