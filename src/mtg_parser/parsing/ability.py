@@ -3,17 +3,16 @@
 Takes oracle text and extracts activated, triggered, and static abilities."""
 
 
-import re
 from dataclasses import dataclass
 from typing import Optional
 from enum import Enum
+
+from mtg_parser.constants.searches import TRIGGER_RE
 
 class AbilityType(Enum):
     ACTIVATED = 'activated'
     TRIGGERED = 'triggered'
     STATIC = 'static'
-    
-TRIGGER_RE = re.compile(r'^(Whenever|When|At)\b', re.IGNORECASE)
 
 @dataclass
 class Ability:
