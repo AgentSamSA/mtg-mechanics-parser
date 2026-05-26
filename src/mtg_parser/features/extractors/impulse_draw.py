@@ -8,14 +8,14 @@ from mtg_parser.features.helpers import get_clauses
 from mtg_parser.constants.searches import IMPULSE_DRAW_RE
 
 def has_impulse_draw(ability: Ability) -> dict[str, int]:
-    
+
     effect = ability.normalized_effect()
     clauses = get_clauses(effect)
-    
+
     found_impulse = 0
-    
+
     for clause in clauses:
         if IMPULSE_DRAW_RE.search(clause):
             found_impulse = 1
-    
-    return {'has_exile_access', found_impulse}
+
+    return {'has_exile_access': found_impulse}

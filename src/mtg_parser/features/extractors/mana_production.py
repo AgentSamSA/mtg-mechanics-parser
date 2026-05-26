@@ -57,4 +57,4 @@ def mana_production(ability: Ability) -> dict[str, int]:
         if is_reduction:
             reduced += count_mana(clause)
 
-    return {'mana_production': mana, 'mana_reduction': reduced}
+    return {'mana_produced': mana, 'mana_reduction': reduced}

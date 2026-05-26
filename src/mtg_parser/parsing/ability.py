@@ -37,7 +37,12 @@ class Ability:
 
 def parse_ability(block: str) -> Ability:
     block = block.strip()
-    
+
+    # Strip ability word prefix (e.g. "Valiant — ", "Landfall — ")
+    if ' — ' in block:
+        _, block = block.split(' — ', 1)
+        block = block.strip()
+
     # Activated
     if ':' in block:
         cost, effect = block.split(':', 1)

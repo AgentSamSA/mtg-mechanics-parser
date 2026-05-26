@@ -1122,7 +1122,7 @@ Whenever this creature mutates, exile cards from the top of your library until y
 b42147e1-cf90-4c12-8abe-7f2931d0607c,Cavern Whisperer,iko,Ikoria: Lair of Behemoths,2020-04-24,2020,5.0,4,4,4.0,4.0,"['Mutate', 'Menace']","Mutate {3}{B} (If you cast this spell for its mutate cost, put it over or under target non-Human creature you own. They mutate into the creature on top plus all abilities from under it.)
 Menace (This creature can't be blocked except by two or more creatures.)
 Whenever this creature mutates, each opponent discards a card.",['B'],common,13
-6985c8a9-9299-461b-8bef-bd2b2c739c11,"Obosh, the Preypiercer",iko,Ikoria: Lair of Behemoths,2020-04-24,2020,5.0,3,5,3.0,5.0,['Companion'],"Companion — Your starting deck contains only cards with odd mana values and land cards. (If this card is your chosen companion, you may put it into your hand from outside the game for {3} as a sorcery.)
+6985c8a9-9299-461b-8bef-bd2b2c739c11,"Obosh, the Preypiercer",iko,Ikoria: Lair of Behemoths,2020-04-24,2020,5.0,3,5,3.0,5.0,"['Companion', 'Double']","Companion — Your starting deck contains only cards with odd mana values and land cards. (If this card is your chosen companion, you may put it into your hand from outside the game for {3} as a sorcery.)
 If a source you control with an odd mana value would deal damage to a permanent or player, it deals double that damage to that permanent or player instead.","['B', 'R']",rare,10
 4056c1dd-9db4-4ff6-9dc5-a69e8da1d2a6,Rooting Moloch,iko,Ikoria: Lair of Behemoths,2020-04-24,2020,5.0,4,4,4.0,4.0,['Cycling'],"When this creature enters, exile target card with a cycling ability from your graveyard. Until the end of your next turn, you may play that card.
 Cycling {2} ({2}, Discard this card: Draw a card.)",['R'],uncommon,12
@@ -1513,7 +1513,7 @@ Vigilance, reach, trample",['G'],uncommon,18
 2c75623c-59f4-4449-ab43-9d1225185ad9,Rottenmouth Viper,blb,Bloomburrow,2024-08-02,2024,6.0,6,6,6.0,6.0,[],"As an additional cost to cast this spell, you may sacrifice any number of nonland permanents. This spell costs {1} less to cast for each permanent sacrificed this way.
 Whenever this creature enters or attacks, put a blight counter on it. Then for each blight counter on it, each opponent loses 4 life unless that player sacrifices a nonland permanent of their choice or discards a card.",['B'],mythic,16
 29423a9a-31a6-4605-8b49-a75895038a3a,Wick's Patrol,blb,Bloomburrow,2024-08-02,2024,6.0,5,3,5.0,3.0,['Mill'],"When this creature enters, mill three cards. When you do, target creature an opponent controls gets -X/-X until end of turn, where X is the greatest mana value among cards in your graveyard.",['B'],uncommon,12
-e9c6e4e6-0c3f-4048-93e6-161a1221ea36,"Byrke, Long Ear of the Law",blb,Bloomburrow,2024-08-02,2024,6.0,4,4,4.0,4.0,['Vigilance'],"Vigilance
+e9c6e4e6-0c3f-4048-93e6-161a1221ea36,"Byrke, Long Ear of the Law",blb,Bloomburrow,2024-08-02,2024,6.0,4,4,4.0,4.0,"['Vigilance', 'Double']","Vigilance
 When Byrke enters, put a +1/+1 counter on each of up to two target creatures.
 Whenever a creature you control with a +1/+1 counter on it attacks, double the number of +1/+1 counters on it.","['G', 'W']",mythic,13
 3c345e24-1726-45ac-91ca-e348d1e7acfe,Eddymurk Crab,blb,Bloomburrow,2024-08-02,2024,7.0,5,5,5.0,5.0,['Flash'],"Flash

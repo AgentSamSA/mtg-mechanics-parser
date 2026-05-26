@@ -50,7 +50,9 @@ def get_token_count(clause: str) -> int:
     if not TOKEN_EVENT_RE.search(clause):
         return 0
     
-    matches = QUANTITY_RE.findall(clause)
+    clause_no_pt = PT_RE.sub('', clause)
+    
+    matches = QUANTITY_RE.findall(clause_no_pt)
     
     total = 0
     for m in matches:
@@ -79,8 +81,9 @@ def has_tokens(ability: Ability) -> dict[str, int]:
     
         pt_pairs = extract_pt(clause)
         pt_score = pt_value(pt_pairs)
-    
+
         num_tokens = get_token_count(clause)
+        pt_total = 0
         pt_total += pt_score * num_tokens
     
         if owner == 'you':
