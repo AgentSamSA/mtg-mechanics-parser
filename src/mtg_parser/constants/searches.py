@@ -1,8 +1,10 @@
 import re
 
-TRIGGER_RE = re.compile(r'^(Whenever|When|At)\b', re.IGNORECASE)
+ABILITY_WORD_RE = re.compile(r'^[^—–—]+[—–]\s*')
 
-PLUS1_COUNTER_RE = re.compile(r'\+1/\+1\s+counters?', re.IGNORECASE)
+TRIGGER_RE = re.compile(r'(?:^|—)\s*(Whenever|When|At)\b', re.IGNORECASE)
+
+PLUS1_COUNTER_RE = re.compile(r'\b(put|place|get)\b.*\+1/\+1\s+counter(s)?', re.IGNORECASE)
 
 TOKEN_EVENT_RE = re.compile(
     r'\bcreate(s)?\b.*\btoken(s)?\b', re.IGNORECASE
