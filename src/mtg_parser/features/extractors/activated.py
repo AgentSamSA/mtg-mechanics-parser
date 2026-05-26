@@ -18,6 +18,6 @@ def activated_features(ability: Ability) -> dict[str, int]:
     has_free = '{0}' in cost
 
     if not has_limiter and (has_life or has_free):
-        return {'activated_no_limiter': 2}
+        return {'activated_no_limiter': 1}
 
     return {'activated_limiter': 1}

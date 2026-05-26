@@ -47,6 +47,7 @@ class AbilityFeatures:
     has_bounce: int = 0
     has_deck_stack: int = 0
     has_minus_X: int = 0
+    has_mass_minus_X: int = 0
     
     # Mana production
     mana_produced: int = 0
@@ -79,6 +80,7 @@ class AbilityFeatures:
             self.has_bounce,
             self.has_deck_stack,
             self.has_minus_X,
+            self.has_mass_minus_X,
             self.mana_produced,
             self.mana_reduction,
             self.has_direct_damage,

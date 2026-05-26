@@ -12,7 +12,7 @@ def has_direct_damage(ability: Ability) -> dict[str, int]:
     effect = check_ability(ability)
     clauses = get_clauses(effect)
     
-    damage = 0
+    found_damage = 0
     
     for clause in clauses:
         if SELF_ONLY_RE.search(clause):
@@ -21,6 +21,6 @@ def has_direct_damage(ability: Ability) -> dict[str, int]:
         if DAMAGE_RE.search(clause):
             
             if OPP_DAMAGE_RE.search(clause):
-                damage += 1
+                found_damage = 1
         
-    return {'has_direct_damage': damage}
+    return {'has_direct_damage': found_damage}

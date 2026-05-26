@@ -12,14 +12,14 @@ def has_destroy(ability: Ability) -> dict[str, int]:
     effect = check_ability(ability)
     clauses = get_clauses(effect)
     
-    destroy = 0
-    mass_destroy = 0
+    found_destroy = 0
+    found_mass_destroy = 0
     
     for clause in clauses:
         if DESTROY_MASS_RE.search(clause):
-            mass_destroy += 2
+            found_mass_destroy = 1
         
         elif DESTROY_RE.search(clause):
-            destroy += 1
+            found_destroy = 1
     
-    return {'has_destroy': destroy, 'has_mass_destroy': mass_destroy}
+    return {'has_destroy': found_destroy, 'has_mass_destroy': found_mass_destroy}

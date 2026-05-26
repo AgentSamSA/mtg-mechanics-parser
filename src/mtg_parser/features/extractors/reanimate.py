@@ -12,10 +12,10 @@ def has_reanimate(ability: Ability) -> dict[str, int]:
     effect = check_ability(ability)
     clauses = get_clauses(effect)
     
-    total = 0
+    found_reanimate = 0
     
     for clause in clauses:
         if REANIMATE_RE.search(clause):
-            total += 1
+            found_reanimate = 1
 
-    return {'has_recursion_battlefield': total}
+    return {'has_recursion_battlefield': found_reanimate}

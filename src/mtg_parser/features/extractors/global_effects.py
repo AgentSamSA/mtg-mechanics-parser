@@ -15,7 +15,7 @@ def has_global(ability: Ability) -> dict[str, int]:
     effect = check_ability(ability)
     clauses = get_clauses(effect)
     
-    total = 0
+    found_global = 0
     
     for clause in clauses:
         if is_resolution_zone_text(clause):
@@ -24,6 +24,6 @@ def has_global(ability: Ability) -> dict[str, int]:
         is_global = any(re.search(p, clause) for p in GLOBAL_QUANTIFIERS)
     
         if is_global:
-            total += 1
+            found_global = 1
     
-    return {'has_global': total}
+    return {'has_global': found_global}

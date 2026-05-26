@@ -11,18 +11,18 @@ def triggered_features(ability: Ability) -> dict[str, int]:
     
     trigger = (ability.condition or '').lower()
     
-    enters = 0
-    dies = 0
-    repeatable = 0
+    found_enters = 0
+    found_dies = 0
+    found_repeatable = 0
     
     if 'whenever' in trigger or 'at' in trigger:
-        repeatable += 1
+        found_repeatable = 1
             
     if trigger.startswith('when'):
         if 'enters' in trigger:
-            enters += 1
+            found_enters = 1
             
         if 'dies' in trigger:
-            dies += 1
+            found_dies
     
-    return {'enters_trigger': enters, 'dies_trigger': dies, 'repeatable_trigger': repeatable}
+    return {'enters_trigger': found_enters, 'dies_trigger': found_dies, 'repeatable_trigger': found_repeatable}

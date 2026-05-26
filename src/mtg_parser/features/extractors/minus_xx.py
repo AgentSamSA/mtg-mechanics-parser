@@ -12,13 +12,14 @@ def has_minus_X(ability: Ability) -> dict[str, int]:
     effect = check_ability(ability)
     clauses = get_clauses(effect)
     
-    total = 0
+    found_minus_X = 0
+    found_mass_minus_X = 0
     
     for clause in clauses:
         if MINUS_X_MASS_RE.search(clause):
-            total += 2
+            found_mass_minus_X = 1
             
         elif MINUS_X_RE.search(clause):
-            total += 1
+            found_minus_X = 1
                       
-    return {'has_minus_X': total}
+    return {'has_minus_X': found_minus_X, 'has_mass_minus_X': found_mass_minus_X}

@@ -17,9 +17,6 @@ def card_advantage(ability: Ability) -> dict[str, int]:
     effect = check_ability(ability)
     clauses = get_clauses(effect)
     
-    is_gain = False
-    is_loss = False
-    
     total = 0
     
     for clause in clauses:

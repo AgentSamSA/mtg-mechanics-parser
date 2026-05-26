@@ -12,17 +12,17 @@ def has_bounce(ability: Ability) -> dict[str, int]:
     effect = check_ability(ability)
     clauses = get_clauses(effect)
     
-    bounce = 0
-    deck_stack = 0
+    found_bounce = 0
+    found_deck_stack = 0
     
     for clause in clauses:
         if 'you control' in clause:
             continue
 
         if TOP_LIBRARY_RE.search(clause):
-            deck_stack += 2
+            found_deck_stack = 1
             
         elif BOUNCE_RE.search(clause):
-            bounce += 1
+            found_bounce = 1
         
-    return {'has_bounce': bounce, 'has_deck_stack': deck_stack}
+    return {'has_bounce': found_bounce, 'has_deck_stack': found_deck_stack}

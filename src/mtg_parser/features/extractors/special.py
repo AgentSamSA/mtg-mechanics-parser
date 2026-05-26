@@ -12,14 +12,14 @@ def special_features(ability: Ability) -> dict[str, int]:
     effect = check_ability(ability)
     clauses = get_clauses(effect)
     
-    counters = 0
-    search = 0
+    found_counters = 0
+    found_search = 0
     
     for clause in clauses:
         if 'search' in clause:
-            search += 1
+            found_search
             
         if PLUS1_COUNTER_RE.search(clause):
-            counters += 1
+            found_counters
         
-    return {'has_search': search, 'plus1_counter': counters}
+    return {'has_search': found_search, 'plus1_counter': found_counters}

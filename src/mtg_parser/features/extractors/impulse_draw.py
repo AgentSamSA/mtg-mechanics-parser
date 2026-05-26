@@ -12,10 +12,10 @@ def has_impulse_draw(ability: Ability) -> dict[str, int]:
     effect = check_ability(ability)
     clauses = get_clauses(effect)
     
-    total = 0
+    found_impulse = 0
     
     for clause in clauses:
         if IMPULSE_DRAW_RE.search(clause):
-            total += 1
+            found_impulse = 1
     
-    return {'has_exile_access', total}
+    return {'has_exile_access', found_impulse}
