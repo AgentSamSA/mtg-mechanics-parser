@@ -11,7 +11,7 @@ def activated_features(ability: Ability) -> dict[str, int]:
     if ability.type != AbilityType.ACTIVATED:
         return {}
 
-    cost = (ability.cost or '').lower()
+    cost = ability.normalized_cost()
 
     has_limiter = bool(LIMITER_RE.search(cost))
     has_life = bool(LIFE_COST_RE.search(cost))

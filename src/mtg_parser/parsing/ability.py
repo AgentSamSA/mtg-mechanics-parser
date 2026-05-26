@@ -19,10 +19,20 @@ class AbilityType(Enum):
 class Ability:
     type: AbilityType
     raw: str
+    effect: str = ''
     
     condition: Optional[str] = None
     cost: Optional[str] = None
-    effect: Optional[str] = None
+    
+    
+    def normalized_effect(self) -> str:
+        return self.effect.lower()
+    
+    def normalized_condition(self) -> str:
+        return (self.condition or '').lower()
+    
+    def normalized_cost(self) -> str:
+        return (self.cost or '').lower()
     
 
 def parse_ability(block: str) -> Ability:
@@ -40,20 +50,21 @@ def parse_ability(block: str) -> Ability:
     
     # Triggered
     if TRIGGER_RE.match(block):
-        if ',' in block:
-            trigger, effect = block.split(',', 1)
-        else:
-            trigger, effect = block, ''
+        parts = block.split(',', 1)
+        
+        trigger = parts[0].strip()
+        effect = parts[1].strip() if len(parts) > 1 else ''
         
         return Ability(
             type=AbilityType.TRIGGERED,
-            condition=trigger.strip(),
-            effect=effect.strip(),
+            condition=trigger,
+            effect=effect,
             raw=block
         )
     
     # Static
     return Ability(
         type=AbilityType.STATIC,
+        effect=block,
         raw=block
     )

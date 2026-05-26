@@ -10,16 +10,6 @@ from mtg_parser.constants.searches import (
     WORD_TO_NUM,
 )
 
-# Set proper feature attributes for ability based on ability type
-def check_ability(ability: Ability):
-    if ability.type == AbilityType.STATIC:
-        effect = (ability.raw or '').lower()
-    else:
-        effect = (ability.effect or '').lower()
-
-    return effect
-
-
 # Get clauses within each ability from oracle text
 def get_clauses(text: str) -> list[str]:
     clauses = CLAUSES_RE.split(text)

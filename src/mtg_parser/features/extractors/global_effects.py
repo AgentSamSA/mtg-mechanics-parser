@@ -5,14 +5,14 @@ import re
 
 from mtg_parser.parsing.ability import Ability
 
-from mtg_parser.features.helpers import check_ability, get_clauses
+from mtg_parser.features.helpers import get_clauses
 from mtg_parser.features.detect_zone import is_resolution_zone_text
 
 from mtg_parser.features.pattern_builder import GLOBAL_QUANTIFIERS
 
 def has_global(ability: Ability) -> dict[str, int]:
     
-    effect = check_ability(ability)
+    effect = ability.normalized_effect()
     clauses = get_clauses(effect)
     
     found_global = 0

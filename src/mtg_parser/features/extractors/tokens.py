@@ -3,7 +3,7 @@
 
 from mtg_parser.parsing.ability import Ability
 
-from mtg_parser.features.helpers import check_ability, get_clauses
+from mtg_parser.features.helpers import get_clauses
 
 from mtg_parser.constants.searches import (
     CREATURE_TOKEN_RE,
@@ -66,7 +66,7 @@ def get_token_count(clause: str) -> int:
 
 def has_tokens(ability: Ability) -> dict[str, int]:
 
-    effect = strip_quoted_text(check_ability(ability))
+    effect = strip_quoted_text(ability.normalized_effect())
     clauses = get_clauses(effect)
     
     total = 0

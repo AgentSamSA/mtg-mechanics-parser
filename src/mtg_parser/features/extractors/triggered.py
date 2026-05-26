@@ -9,7 +9,7 @@ def triggered_features(ability: Ability) -> dict[str, int]:
     if ability.type != AbilityType.TRIGGERED:
         return {}
     
-    trigger = (ability.condition or '').lower()
+    trigger = ability.normalized_condition()
     
     found_enters = 0
     found_dies = 0

@@ -3,13 +3,13 @@
 
 from mtg_parser.parsing.ability import Ability
 
-from mtg_parser.features.helpers import check_ability, get_clauses
+from mtg_parser.features.helpers import get_clauses
 
 from mtg_parser.constants.searches import DESTROY_RE, DESTROY_MASS_RE
 
 def has_destroy(ability: Ability) -> dict[str, int]:
     
-    effect = check_ability(ability)
+    effect = ability.normalized_effect()
     clauses = get_clauses(effect)
     
     found_destroy = 0
