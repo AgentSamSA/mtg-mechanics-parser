@@ -65,12 +65,13 @@ QUANTIFIER_PATTERNS = [
     r'\bopponents\b',
 ]
 
-HAND_GAIN_PATTERNS = [
-    r'\bdraw(s)?\b',
-    r'\bput(s)? .* into .* hand(s)?\b',
-    r'\breturn(s)? .* from (the ) graveyard(s)?\b.*\bto (your|their|owner\'s) hand(s)?\b',
-]
-HAND_LOSS_PATTERNS = [r'\discard(s)?\b']
+HAND_GAIN_PATTERNS = re.compile(
+    r'\bdraw(s)?\b'
+    r'|\bput(s)? .* into .* hand(s)?\b'
+    r'|\breturn(s)? .* from (the ) graveyard(s)?\b.*\bto (your|their|owner\'s) hand(s)?\b',
+    re.IGNORECASE,
+)
+HAND_LOSS_PATTERNS = re.compile(r'\bdiscard(s)?\b', re.IGNORECASE)
 
 REANIMATE_RE = re.compile(
     r'\b(return|put)(s)?\b.*\bgraveyard(s)?\b.*\b(battlefield|play)(s)?\b',
