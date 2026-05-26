@@ -18,4 +18,4 @@ def has_impulse_draw(ability: Ability) -> dict[str, int]:
         if IMPULSE_DRAW_RE.search(clause):
             found_impulse = 1
     
-    return {'has_exile_access', found_impulse}
+    return {'has_exile_access': found_impulse}
