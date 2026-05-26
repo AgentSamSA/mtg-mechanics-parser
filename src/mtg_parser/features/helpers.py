@@ -10,7 +10,7 @@ from mtg_parser.constants.searches import (
     WORD_TO_NUM,
 )
 
-# Set proper feature attributes for ability
+# Set proper feature attributes for ability based on ability type
 def check_ability(ability: Ability):
     if ability.type == AbilityType.STATIC:
         effect = (ability.raw or '').lower()

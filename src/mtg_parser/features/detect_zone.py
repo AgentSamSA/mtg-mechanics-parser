@@ -1,6 +1,6 @@
 """mtg-mechanics-parser zone detection.
 
-Identify zones in oracle text."""
+Identify certain gameplay zones in oracle text."""
 
 
 import re

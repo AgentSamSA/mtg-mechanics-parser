@@ -1,6 +1,7 @@
 """mtg-mechanics-parser ability feature definition.
 
-Define our ability features."""
+Defines our ability features based on our scoring criteria.
+Contains accumulator function to sum our point totals for scoring."""
 
 
 from dataclasses import dataclass

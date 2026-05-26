@@ -1,4 +1,7 @@
-"""mtg-mechanics-parser pipeline orchestrator."""
+"""mtg-mechanics-parser pipeline orchestrator.
+
+Takes in our cards dataframe, builds card contexts, then obtains blocks.
+Filters out blocks that only contain keywords."""
 
 
 from mtg_parser.pipeline.build_context import build_card_context
