@@ -4,9 +4,8 @@
 the correct token count should be 1, but get_token_count returns 3 instead. As a result, the generated vector incorrectly contains a value of 6.
 Fixed this by filtering out text in the “P/T” format.
 
-2. In Searches.py, the OPP_DAMAGE_RE didn't involve the case like 'deals 2 damages to each player'.
-<img width="1165" height="226" alt="Screenshot 2026-05-25 at 11 33 03 PM" src="https://github.com/user-attachments/assets/80833f31-20b2-46d9-8cea-df5a7946ac2f" />
-Fixed this by adding 'each player' in the OPP_DAMAGE_RE. the damage.py will see if this is a damage or not.
+2. Based on the criteria, we excludes 'enters' and 'dies', which are not yet excluded in the code. Added that in the triggered.py.
+
 
 # mtg-mechanics-parser
 An automated mechanics parser and scoring system for creature cards in Magic: The Gathering.
