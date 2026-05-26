@@ -6,7 +6,7 @@ Fixed this by filtering out text in the “P/T” format.
 
 2. Based on the criteria, we excludes 'enters' and 'dies', which are not yet excluded in the code. Added that in the triggered.py.
 
-
+3. The triggered_re can't detect 'whenever' if it follows something like 'vigilant - '. Fixed that.
 # mtg-mechanics-parser
 An automated mechanics parser and scoring system for creature cards in Magic: The Gathering.
 
