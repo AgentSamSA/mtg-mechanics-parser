@@ -15,3 +15,5 @@ class CardFeatures:
     
     power: float
     toughness: float
+
+    power_is_star: bool = False

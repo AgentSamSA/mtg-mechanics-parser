@@ -1,6 +1,8 @@
 """mtg-mechanics-parser card advantage features extraction."""
 
 
+import re
+
 from mtg_parser.parsing.ability import Ability
 
 from mtg_parser.features.helpers import get_clauses, get_count_from_text
@@ -20,8 +22,8 @@ def card_advantage(ability: Ability) -> dict[str, int]:
     total = 0
     
     for clause in clauses:
-        is_gain = HAND_GAIN_PATTERNS.search(clause)
-        is_loss = HAND_LOSS_PATTERNS.search(clause)
+        is_gain = any(re.search(p, clause) for p in HAND_GAIN_PATTERNS)
+        is_loss = any(re.search(p, clause) for p in HAND_LOSS_PATTERNS)
         
         multiplier = 0 if ALL_PLAYERS_RE.search(clause) else 1
         

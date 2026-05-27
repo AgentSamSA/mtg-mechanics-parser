@@ -18,5 +18,8 @@ def power_bonus(power: float) -> float:
     else:
         return 0
 
-def score_pt(power: float, toughness: float) -> float:
-    return power + toughness + power_bonus(power)
+# Star power/toughness uses the CMC value with no bonus applied
+def score_pt(power: float, toughness: float, power_is_star: bool = False) -> float:
+    bonus = 0 if power_is_star else power_bonus(power)
+
+    return power + toughness + bonus
