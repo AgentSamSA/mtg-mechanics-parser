@@ -66,11 +66,13 @@ def build_clean_dataset(
     merged['year'] = merged['released_at'].dt.year
 
     # Get numeric power/toughness values
-    merged['power_numeric'] = pd.to_numeric(merged['power'], errors='coerce')
+    merged['power_numeric'] = pd.to_numeric(
+        merged['power'], errors='coerce'
+    ).fillna(merged['cmc'])
 
     merged['toughness_numeric'] = pd.to_numeric(
         merged['toughness'], errors='coerce'
-    )
+    ).fillna(merged['cmc'])
 
     column_order = [
         'oracle_id',
