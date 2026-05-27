@@ -7,11 +7,10 @@ from dataclasses import dataclass
 
 from mtg_parser.parsing.ability import Ability
 from mtg_parser.features.keyword_features import KeywordFeatures
-from typing import List
 
 @dataclass
 class CardFeatures:
-    abilities: List[Ability]
+    abilities: list[Ability]
     keyword_features: KeywordFeatures
     
     power: float

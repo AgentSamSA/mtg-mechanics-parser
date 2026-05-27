@@ -5,11 +5,9 @@ Use AbilityFeaturePipeline and AbilityFeatures to score each card's abilities.""
 
 from mtg_parser.parsing.ability import Ability
 from mtg_parser.features.ability_features import AbilityFeatures
-from mtg_parser.features.feature_extractor import AbilityFeaturePipeline
 from mtg_parser.scoring.models.ability_score import AbilityScore
-from typing import List
 
-from mtg_parser.constants.features import FEATURES, FEATURE_WEIGHTS, ABILITY_PIPELINE
+from mtg_parser.constants.features import FEATURE_WEIGHTS, ABILITY_PIPELINE
 
 # Sum individual feature scores for ability
 def score_ability(features: AbilityFeatures) -> int:
@@ -19,7 +17,7 @@ def score_ability(features: AbilityFeatures) -> int:
     )
 
 # Get scores for each ability in card
-def get_ability_scores(abilities: List[Ability]) -> List[AbilityScore]:    
+def get_ability_scores(abilities: list[Ability]) -> list[AbilityScore]:    
     ability_scores = []
     
     for ability in abilities:
@@ -36,7 +34,7 @@ def get_ability_scores(abilities: List[Ability]) -> List[AbilityScore]:
     return ability_scores
 
 # Aggregate scored abilities
-def score_abilities(abilities: List[Ability]) -> int:
+def score_abilities(abilities: list[Ability]) -> int:
     return sum(
         s.score for s in get_ability_scores(abilities)
     )
