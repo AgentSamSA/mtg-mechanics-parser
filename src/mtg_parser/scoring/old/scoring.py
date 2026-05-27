@@ -12,7 +12,7 @@ import ast
 import math
 from typing import Any, Mapping
 
-from mtg_parser.scoring.weights import (
+from mtg_parser.scoring.old.weights import (
     CATEGORY_WEIGHTS,
     DEFAULT_KEYWORD_WEIGHT,
     KEYWORD_WEIGHTS,
