@@ -38,7 +38,7 @@ FEATURE_WEIGHTS = {
     'has_search': 1,
     'plus1_counter': 1,
     'enters_trigger': 1,
-    'dies_trigger': 1,
+    'dies_trigger': 0,
     'repeatable_trigger': 1,
     'token_pt_total': 1,
     'activated_limiter': 1,
@@ -65,7 +65,7 @@ KEYWORD_WEIGHTS = {
     'protection': 2,
     'indestructible': 2,
     'hexproof': 2,
-    'defender': -1
+    'defender': 0
 }
 
 ABILITY_PIPELINE = AbilityFeaturePipeline(FEATURES)

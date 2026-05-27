@@ -72,7 +72,7 @@ HAND_GAIN_PATTERNS = [
     r'\bput(s)? .* into .* hand(s)?\b',
     r'\breturn(s)? .* from (the ) graveyard(s)?\b.*\bto (your|their|owner\'s) hand(s)?\b',
 ]
-HAND_LOSS_PATTERNS = [r'\discard(s)?\b']
+HAND_LOSS_PATTERNS = [r'\bdiscard(s)?\b']
 
 REANIMATE_RE = re.compile(
     r'\b(return|put)(s)?\b.*\bgraveyard(s)?\b.*\b(battlefield|play)(s)?\b',

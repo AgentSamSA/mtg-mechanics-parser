@@ -3,12 +3,18 @@
 
 from mtg_parser.parsing.ability import Ability, AbilityType
 
-from mtg_parser.constants.searches import LIMITER_RE, LIFE_COST_RE
+from mtg_parser.constants.searches import LIMITER_RE, LIFE_COST_RE, ADD_RE
 
 # Classify type of activation cost
 def activated_features(ability: Ability) -> dict[str, int]:
 
     if ability.type != AbilityType.ACTIVATED:
+        return {}
+
+    effect = ability.normalized_effect()
+
+    # Mana abilities are excluded; scored under mana production
+    if ADD_RE.search(effect):
         return {}
 
     cost = ability.normalized_cost()
