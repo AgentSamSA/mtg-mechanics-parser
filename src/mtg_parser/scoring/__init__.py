@@ -1,6 +1,6 @@
 """Scoring subpackage. Converts structured card features into scores."""
 
-from mtg_parser.scoring.scoring import (
+from mtg_parser.scoring.old.scoring import (
     score_card,
     score_keywords,
     score_oracle_text,
