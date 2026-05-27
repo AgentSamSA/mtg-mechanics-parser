@@ -20,4 +20,8 @@ dependencies = [
 package-dir = {"" = "src"}
 
 [project.optional-dependencies]
-dev = ["jupyter", "matplotlib"]
+dev = ["jupyter", "matplotlib", "pytest"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

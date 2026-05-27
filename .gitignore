@@ -14,3 +14,9 @@ data/*/*.ndjson
 
 # Packaging
 *.egg-info/
+
+# Virtual environment
+.venv/
+
+# Editor
+.vscode/
