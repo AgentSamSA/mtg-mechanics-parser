@@ -39,7 +39,7 @@ def parse_ability(block: str) -> Ability:
     block = block.strip()
     
     # Activated
-    if ':' in block:
+    if ':' in block and not TRIGGER_RE.match(block):
         cost, effect = block.split(':', 1)
         return Ability(
             type=AbilityType.ACTIVATED,
@@ -49,7 +49,7 @@ def parse_ability(block: str) -> Ability:
         )
     
     # Triggered
-    if TRIGGER_RE.match(block):
+    elif TRIGGER_RE.match(block):
         parts = block.split(',', 1)
         
         trigger = parts[0].strip()
