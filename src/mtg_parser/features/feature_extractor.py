@@ -7,12 +7,17 @@ Applies feature extractors to an ability and aggregates their outputs into a fea
 from mtg_parser.parsing.ability import Ability
 from mtg_parser.features.ability_features import AbilityFeatures
 
+from mtg_parser.features.helpers import is_non_scoring
+
 class AbilityFeaturePipeline:
     def __init__(self, features):
         self.features = features
     
     def transform_one(self, ability: Ability) -> AbilityFeatures:
         f = AbilityFeatures()
+        
+        if is_non_scoring(ability.effect):
+            return f
         
         for extractor in self.features:
             updates = extractor(ability)

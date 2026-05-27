@@ -4,11 +4,11 @@ ABILITY_WORD_RE = re.compile(r'^[^—–—]+[—–]\s*')
 
 TRIGGER_RE = re.compile(r'(?:^|—)\s*(Whenever|When|At)\b', re.IGNORECASE)
 
-PLUS1_COUNTER_RE = re.compile(r'\b(put|place|get)\b.*\+1/\+1\s+counter(s)?', re.IGNORECASE)
-
-TOKEN_EVENT_RE = re.compile(
-    r'\bcreate(s)?\b.*\btoken(s)?\b', re.IGNORECASE
+PLUS1_COUNTER_RE = re.compile(
+    r'\b(put|place|get)\b.*\+1/\+1\s+counter(s)?', re.IGNORECASE
 )
+
+TOKEN_EVENT_RE = re.compile(r'\bcreate(s)?\b.*\btoken(s)?\b', re.IGNORECASE)
 CREATURE_TOKEN_RE = re.compile(
     r'\bcreate(s)?\b.*\bcreature\b.*\btoken(s)?\b', re.IGNORECASE
 )
@@ -97,30 +97,42 @@ DESTROY_MASS_RE = re.compile(
 )
 
 DAMAGE_RE = re.compile(r'\bdeal(s)?.*\bdamage\b', re.IGNORECASE)
-OPP_DAMAGE_RE = re.compile(r'\b(any target|that player|target opponent|each opponent)\b')
+OPP_DAMAGE_RE = re.compile(
+    r'\b(any target|that player|target opponent|each opponent)\b'
+)
 SELF_ONLY_RE = re.compile(r'\byou\b.*\bdamage\b|\bdeal(s)?\b.*\byou\b')
 
 BOUNCE_RE = re.compile(
-    r'\breturn\b.*\bto (its owner\'s|their|your) hand\b',
-    re.IGNORECASE
+    r'\breturn\b.*\bto (its owner\'s|their|your) hand\b', re.IGNORECASE
 )
 TOP_LIBRARY_RE = re.compile(
-    r'\bput\b.*\bon top of (its owner\'s|their|your) library\b',
-    re.IGNORECASE
+    r'\bput\b.*\bon top of (its owner\'s|their|your) library\b', re.IGNORECASE
 )
 
 MINUS_X_RE = re.compile(
-    r'\b(target|creature)\b.*\bget(s)? -\d+/-\d+\b',
-    re.IGNORECASE
+    r'\b(target|creature)\b.*\bget(s)? -\d+/-\d+\b', re.IGNORECASE
 )
 MINUS_X_MASS_RE = re.compile(
-    r'\b(each|all)\b.*\bget(s)? -\d+/-\d+\b',
-    re.IGNORECASE
+    r'\b(each|all)\b.*\bget(s)? -\d+/-\d+\b', re.IGNORECASE
 )
 
 MANA_SYMBOL_RE = re.compile(r'\{([^}]+)\}', re.IGNORECASE)
 ANY_COLOR_RE = re.compile(r'\badd\b.*\bany\b.*\bcolor(s)?\b')
 COST_REDUCTION_RE = re.compile(r'cost.*less to cast', re.IGNORECASE)
+
+NON_SCORING_PATTERNS = [
+    r"\b(this|your) creature(s)? can't (attack or block|attack|block)\b[.\s]*(unless.*)?",
+    r'\b(this|your) creature(s)? enter(s)? tapped\b',
+    r'\bsacrifice (this|a) creature\b[.\s]*(unless.*)?',
+    r'\bas an additional cost to cast this spell\b',
+    r"'s power and toughness are each equal to\b",
+    r"'s power is equal to\b",
+    r"'s toughness is equal to\b",
+]
+
+NON_SCORING_RE = re.compile(
+    '|'.join(f'(?:{p})' for p in NON_SCORING_PATTERNS), re.IGNORECASE
+)
 
 ADD_RE = re.compile(r'\badd\b', re.IGNORECASE)
 OR_RE = re.compile(r'\bor\b', re.IGNORECASE)
