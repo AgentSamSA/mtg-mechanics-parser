@@ -8,6 +8,7 @@ from mtg_parser.constants.searches import (
     SUBCLAUSE_RE,
     QUANTITY_RE,
     WORD_TO_NUM,
+    NON_SCORING_RE
 )
 
 # Get clauses within each ability from oracle text
@@ -20,7 +21,6 @@ def get_clauses(text: str) -> list[str]:
         final.extend(parts)
 
     return [p.strip() for p in final if p.strip()]
-
 
 # Get total value from text
 def get_count_from_text(effect: str) -> int:
@@ -35,3 +35,7 @@ def get_count_from_text(effect: str) -> int:
             total += WORD_TO_NUM.get(m, 1)
 
     return total
+
+# Get non-scoring abilities from text
+def is_non_scoring(text: str) -> bool:
+    return bool(NON_SCORING_RE.search(text))

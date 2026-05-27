@@ -9,7 +9,10 @@ from mtg_parser.utils.normalizer import normalize_keyword
 
 # Strip additional text for keyword line
 def strip_keyword_params(token: str) -> str:
-    return re.sub(r'\{.*?}', '', token).strip()
+    token = re.sub(r'\{[^}]+\}', '', token)
+    token = re.sub(r'\b\d+\b', '', token)
+    
+    return ' '.join(token.split()).strip()
 
 # Build normalized keyword set from keywords column
 def build_card_keywords(row):
