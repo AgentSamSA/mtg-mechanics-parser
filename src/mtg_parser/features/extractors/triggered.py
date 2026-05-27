@@ -23,6 +23,6 @@ def triggered_features(ability: Ability) -> dict[str, int]:
             found_enters = 1
             
         if 'dies' in trigger:
-            found_dies
+            found_dies = 1
     
     return {'enters_trigger': found_enters, 'dies_trigger': found_dies, 'repeatable_trigger': found_repeatable}
