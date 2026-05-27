@@ -5,7 +5,7 @@ Contains accumulator function to sum our point totals for scoring."""
 
 
 from dataclasses import dataclass
-from typing import List, Dict, Callable, Optional
+from typing import List
 
 from mtg_parser.constants.features import FEATURES
 
