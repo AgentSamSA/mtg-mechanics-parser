@@ -27,7 +27,8 @@ def build_card_ability_bundle(row):
             set=row['set'],
             set_name=row['set_name'],
             released_at=row['released_at'],
-            abilities=abilities,
+            cmc=row['cmc'],
+            abilities=abilities
         )
     )
 

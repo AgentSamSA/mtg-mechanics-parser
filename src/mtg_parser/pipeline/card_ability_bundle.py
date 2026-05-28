@@ -15,5 +15,6 @@ class CardAbilityBundle:
     set: str
     set_name: str
     released_at: date
+    cmc: float
     
     abilities: list[Ability]
