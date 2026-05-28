@@ -1,6 +1,6 @@
 """mtg-mechanics-parser keyword router module.
 
-Identify keyword lines in oracle text to avoid reparsing them."""
+Identify keyword lines in oracle text to avoid reparsing them for ability feature detection."""
 
 
 import re

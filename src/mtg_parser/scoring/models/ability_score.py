@@ -1,6 +1,8 @@
 """mtg-mechanics-parser ability scoring object.
 
-Provides structured breakdown of each ability's score contribution."""
+Provides structured breakdown of each ability's score contribution.
+Contains the parsed Ability object and the extracted AbilityFeatures object.
+Stores the score from the ability as an int."""
 
 
 from dataclasses import dataclass

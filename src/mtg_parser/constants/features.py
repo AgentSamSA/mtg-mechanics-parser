@@ -1,3 +1,8 @@
+"""mtg-mechanics-parser feature-relevant constants.
+
+Contains either features, feature weights, or the feature pipeline initialization."""
+
+
 from mtg_parser.features.extractors.activated import activated_features
 from mtg_parser.features.extractors.bounce import has_bounce
 from mtg_parser.features.extractors.card_advantage import card_advantage

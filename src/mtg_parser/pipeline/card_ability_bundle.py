@@ -1,4 +1,6 @@
-"""mtg-mechanics-parser card ability bundle object."""
+"""mtg-mechanics-parser card ability bundle object.
+
+Stores certain card-level metadata and a list of Ability objects for each parsed card."""
 
 
 from dataclasses import dataclass

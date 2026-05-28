@@ -1,6 +1,6 @@
 """mtg-mechanics-parser keyword scorer.
 
-Use KeywordFeatures to score keyword value."""
+Use KeywordFeatures to score keyword value based on keyword weights."""
 
 
 from mtg_parser.features.keyword_features import KeywordFeatures

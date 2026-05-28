@@ -1,6 +1,7 @@
 """mtg-mechanics-parser ability scorer.
 
-Use AbilityFeaturePipeline and AbilityFeatures to score each card's abilities."""
+Use AbilityFeaturePipeline and AbilityFeatures to score each card's abilities.
+Outputs a list of AbilityScore objects for the CardScore object."""
 
 
 from mtg_parser.parsing.ability import Ability

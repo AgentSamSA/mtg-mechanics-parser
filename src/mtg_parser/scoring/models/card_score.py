@@ -1,4 +1,8 @@
-"""mtg-mechanics-parser card scoring object."""
+"""mtg-mechanics-parser card scoring object.
+
+Contains a list of AbilityScore objects and the score for keywords and power/toughness as floats.
+Includes aggregation function in ability property for obtaining total score from abilities.
+Includes aggregation function to sum total score from all three categories."""
 
 
 from dataclasses import dataclass
