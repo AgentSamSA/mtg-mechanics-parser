@@ -1,8 +1,6 @@
 """mtg-mechanics-parser feature extraction helper utilities."""
 
 
-from mtg_parser.parsing.ability import Ability, AbilityType
-
 from mtg_parser.constants.searches import (
     CLAUSES_RE,
     SUBCLAUSE_RE,

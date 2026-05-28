@@ -1,3 +1,8 @@
+"""mtg-mechanics parser regex search library.
+
+Stores various regex searches for parsing and feature extraction."""
+
+
 import re
 
 ABILITY_WORD_RE = re.compile(r'^[^—–—]+[—–]\s*')

@@ -1,6 +1,6 @@
 """mtg-mechanics-parser card features definition.
 
-Aggregates our existing features for each Card object."""
+Aggregates our existing features for each card we have parsed."""
 
 
 from dataclasses import dataclass

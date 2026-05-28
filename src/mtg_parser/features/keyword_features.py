@@ -1,6 +1,7 @@
 """mtg-mechanics-parser keyword features definition.
 
-Defines our keyword features based on our scoring criteria."""
+Defines our keyword features based on our scoring criteria.
+Builds out keyword features from the card row."""
 
 
 from dataclasses import dataclass

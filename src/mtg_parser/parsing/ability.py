@@ -1,7 +1,7 @@
 """mtg-mechanics-parser ability parsing module.
 
 Ability class defines ability structures and definitions.
-Takes in oracle text and extracts activated, triggered, and static abilities."""
+Takes in oracle text block and labels activated, triggered, and static abilities."""
 
 
 from dataclasses import dataclass

@@ -1,7 +1,7 @@
 """mtg-mechanics-parser ability feature pipeline.
 
 Defines AbilityFeaturePipeline to apply our feature extractors. 
-Applies feature extractors to an ability and aggregates their outputs into a feature vector."""
+Applies feature extractors to an ability and aggregates their outputs into a features vector."""
 
 
 from mtg_parser.parsing.ability import Ability

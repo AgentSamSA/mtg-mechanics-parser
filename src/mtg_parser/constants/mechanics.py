@@ -1,3 +1,8 @@
+"""mtg-mechanics-parser mechanics and type definitions.
+
+Contains various game mechanic and typing definitions."""
+
+
 from mtg_parser.utils.normalizer import normalize_keyword
 
 RAW_ABILITY_WORDS = {
