@@ -65,6 +65,7 @@ KEYWORD_WEIGHTS = {
     'protection': 2,
     'indestructible': 2,
     'hexproof': 2,
+    'offspring': 3,
     'defender': -1
 }
 
