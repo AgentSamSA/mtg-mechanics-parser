@@ -1,7 +1,7 @@
 """mtg-mechanics-parser ability feature pipeline.
 
 Defines AbilityFeaturePipeline to apply our feature extractors. 
-Applies feature extractors to an ability and aggregates their outputs into a feature vector."""
+Applies feature extractors to an ability and aggregates their outputs into a features vector."""
 
 
 from mtg_parser.parsing.ability import Ability
@@ -25,5 +25,10 @@ class AbilityFeaturePipeline:
             
         return f
     
-    def transform(self, abilities):
-        return [self.transform_one(a).to_vector() for a in abilities]
+    def transform(self, abilities, return_vectors: bool = False):
+        feats = [self.transform_one(a) for a in abilities]
+        
+        if return_vectors:
+            return(f.to_vector() for f in feats)
+        
+        return feats

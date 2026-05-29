@@ -15,10 +15,12 @@ def build_creature_quantifier_patterns():
         rf'\ball ({types})s?\b',
         rf'\bother ({types})s?\b',
         rf'\beach ({types})s?\b',
-        rf'\b({types})s you control\b',
-        rf'\b({types})s?\b',
+        rf'\b({types})s?.*\byou control\b',
+        rf'\b({types})s?\b(?!.*\byou control\b)',
     ]
 
 CREATURE_QUANTIFIERS = build_creature_quantifier_patterns()
 
 GLOBAL_QUANTIFIERS = QUANTIFIER_PATTERNS + CREATURE_QUANTIFIERS
+
+GLOBAL_PATTERNS = [re.compile(p, re.IGNORECASE) for p in GLOBAL_QUANTIFIERS]

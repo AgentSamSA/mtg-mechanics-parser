@@ -1,4 +1,4 @@
-"""mtg-mechanics-parser bouncing features extraction."""
+"""mtg-mechanics-parser bounce features extraction."""
 
 
 from mtg_parser.parsing.ability import Ability

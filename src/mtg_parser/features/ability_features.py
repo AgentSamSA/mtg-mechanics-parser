@@ -5,9 +5,6 @@ Contains accumulator function to sum our point totals for scoring."""
 
 
 from dataclasses import dataclass
-from typing import List, Dict, Callable, Optional
-
-from mtg_parser.constants.features import FEATURES
 
 @dataclass
 class AbilityFeatures:
@@ -60,7 +57,7 @@ class AbilityFeatures:
         for k, v in updates.items():
             setattr(self, k, getattr(self, k) + v)
     
-    def to_vector(self) -> List[int]:
+    def to_vector(self) -> list[int]:
         return [
             self.baseline_score,
             self.has_search,
