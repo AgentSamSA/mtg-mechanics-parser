@@ -35,5 +35,5 @@ def build_card_ability_bundle(row):
 def extract_abilities(df):
     return [
         build_card_ability_bundle(row)
-        for _, row in df.iterrows
+        for _, row in df.iterrows()
     ]

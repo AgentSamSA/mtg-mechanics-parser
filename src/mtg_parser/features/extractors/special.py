@@ -17,9 +17,9 @@ def special_features(ability: Ability) -> dict[str, int]:
     
     for clause in clauses:
         if 'search' in clause:
-            found_search
+            found_search = 1
             
         if PLUS1_COUNTER_RE.search(clause):
-            found_counters
+            found_counters = 1
         
     return {'has_search': found_search, 'plus1_counter': found_counters}

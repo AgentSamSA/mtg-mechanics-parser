@@ -3,8 +3,10 @@
 Tranforms Scryfall keyword data to one-hot encoded features."""
 
 
-from mtg_parser.constants.mechanics import ABILITY_WORDS
+from mtg_parser.features.keyword_features import is_real_keyword
 from mtg_parser.utils.normalizer import normalize_keyword
+
+from mtg_parser.constants.mechanics import ABILITY_WORDS
 
 # Get all keywords present in the dataset
 def get_true_keywords(df):
@@ -19,7 +21,7 @@ def get_true_keywords(df):
 
             clean_keyword = normalize_keyword(keyword)
 
-            if clean_keyword not in ABILITY_WORDS:
+            if is_real_keyword(clean_keyword):
                 keyword_set.add(clean_keyword)
 
     return sorted(keyword_set)
@@ -28,16 +30,14 @@ def get_true_keywords(df):
 def build_keyword_columns(df, keyword_list):
     df = df.copy()
 
-    df['_normalized_keywords'] = df['keywords'].apply(
-        lambda x: [normalize_keyword(k) for k in x]
+    normalized = df['keywords'].apply(
+        lambda x: {normalize_keyword(k) for k in x}
         if isinstance(x, list)
-        else []
+        else set()
     )
 
     for keyword in keyword_list:
-        col = f'has_{keyword}'
-
-        df[col] = df['_normalized_keywords'].apply(lambda x: int(keyword in x))
+        df[f'has_{keyword}'] = normalized.map(lambda s: int(keyword in s))
 
     return df
 

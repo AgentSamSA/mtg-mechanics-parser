@@ -3,14 +3,45 @@
 
 from mtg_parser.parsing.ability import Ability
 
-from mtg_parser.features.helpers import get_clauses, get_count_from_text
+from mtg_parser.features.helpers import get_clauses, get_count_from_text, classify_target, is_all_players_effect
 
 from mtg_parser.constants.searches import (
-    HAND_GAIN_PATTERNS,
-    HAND_LOSS_PATTERNS,
-    ALL_PLAYERS_RE,
-    OPPONENT_RE
+    DRAW_RE,
+    PUT_INTO_HAND_RE,
+    RETURN_TO_HAND_RE,
+    DISCARD_RE,
 )
+from mtg_parser.constants.mechanics import EVENT_VALUE
+
+# Determine card advantage value for the ability
+def score_clause_card_advantage(clause: str) -> int:
+    if is_all_players_effect(clause):
+        return 0
+    
+    score = 0
+    direction = classify_target(clause)
+    
+    draw_match = DRAW_RE.search(clause)
+    if draw_match:
+        count = get_count_from_text(draw_match.group())
+        score += EVENT_VALUE['draw'] * direction * count
+    
+    put_match = PUT_INTO_HAND_RE.search(clause)
+    if put_match:
+        count = get_count_from_text(put_match.group())
+        score += EVENT_VALUE['put_into_hand'] * direction * count
+    
+    return_match = RETURN_TO_HAND_RE.search(clause)
+    if return_match:
+        count = get_count_from_text(put_match.group())
+        score += EVENT_VALUE['return_to_hand'] * direction * count
+    
+    discard_match = DISCARD_RE.search(clause)
+    if discard_match:
+        count = get_count_from_text(discard_match.group())
+        score += EVENT_VALUE['discard'] * direction * count
+    
+    return score
 
 def card_advantage(ability: Ability) -> dict[str, int]:
 
@@ -20,25 +51,6 @@ def card_advantage(ability: Ability) -> dict[str, int]:
     total = 0
     
     for clause in clauses:
-        is_gain = HAND_GAIN_PATTERNS.search(clause)
-        is_loss = HAND_LOSS_PATTERNS.search(clause)
-        
-        multiplier = 0 if ALL_PLAYERS_RE.search(clause) else 1
-        
-        if is_gain:
-            num_cards = get_count_from_text(clause)
-                            
-            if OPPONENT_RE.search(clause):
-                total -= multiplier * num_cards
-            else:
-                total += multiplier * num_cards
-                    
-        if is_loss:
-            num_cards = get_count_from_text(clause)
-            
-            if OPPONENT_RE.search(clause):
-                total += multiplier * num_cards
-            else:
-                total -= multiplier * num_cards
+        total += score_clause_card_advantage(clause)
 
-    return {'card_advantage': total if total >= 0 else 0}
+    return {'card_advantage': max(total, 0)}
