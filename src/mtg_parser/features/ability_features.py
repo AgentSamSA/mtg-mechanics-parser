@@ -6,8 +6,6 @@ Contains accumulator function to sum our point totals for scoring."""
 
 from dataclasses import dataclass
 
-from mtg_parser.constants.features import FEATURES
-
 @dataclass
 class AbilityFeatures:
     baseline_score: int = 0

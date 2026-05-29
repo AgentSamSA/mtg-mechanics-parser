@@ -10,14 +10,14 @@ ABILITY_WORD_RE = re.compile(r'^[^—–—]+[—–]\s*')
 TRIGGER_RE = re.compile(r'(?:^|—)\s*(Whenever|When|At)\b', re.IGNORECASE)
 
 PLUS1_COUNTER_RE = re.compile(
-    r'\b(put|place|get)\b.*\+1/\+1\s+counter(s)?', re.IGNORECASE
+    r'\b(put|place|get)\b.*\+1/\+1\s+counters?', re.IGNORECASE
 )
 
-TOKEN_EVENT_RE = re.compile(r'\bcreate(s)?\b.*\btoken(s)?\b', re.IGNORECASE)
+TOKEN_EVENT_RE = re.compile(r'\bcreates?\b.*\btokens?\b', re.IGNORECASE)
 CREATURE_TOKEN_RE = re.compile(
-    r'\bcreate(s)?\b.*\bcreature\b.*\btoken(s)?\b', re.IGNORECASE
+    r'\bcreates?\b.*\bcreature\b.*\btokens?\b', re.IGNORECASE
 )
-OPPONENT_RE = re.compile(r'\bopponent(s)?\b|\beach opponent\b', re.IGNORECASE)
+OPPONENT_RE = re.compile(r'\bopponents?\b|\beach opponent\b', re.IGNORECASE)
 
 PT_RE = re.compile(r'(\d+|X|\*)\/(\d+|X|\*)', re.IGNORECASE)
 
@@ -47,7 +47,7 @@ LIMITER_RE = re.compile(
 )
 LIFE_COST_RE = re.compile(r'pay \d+ life', re.IGNORECASE)
 
-CREATURE_RE = re.compile(r'\bcreature(s)?\b', re.IGNORECASE)
+CREATURE_RE = re.compile(r'\bcreatures?\b', re.IGNORECASE)
 
 ZONE_PATTERNS = [
     r'\bgraveyard\b',
@@ -72,15 +72,18 @@ QUANTIFIER_PATTERNS = [
     r'\bopponents\b',
 ]
 
-HAND_GAIN_PATTERNS = [
-    r'\bdraw(s)?\b',
-    r'\bput(s)? .* into .* hand(s)?\b',
-    r'\breturn(s)? .* from (the ) graveyard(s)?\b.*\bto (your|their|owner\'s) hand(s)?\b',
-]
-HAND_LOSS_PATTERNS = [r'\discard(s)?\b']
+DRAW_RE = re.compile(r'\bdraws?\b\s+(a\s+)?cards?\b', re.IGNORECASE)
+PUT_INTO_HAND_RE = re.compile(
+    r'\bputs?\b.*\binto\b.*\bhands?\b', re.IGNORECASE
+)
+RETURN_TO_HAND_RE = re.compile(
+    r'\breturns?\b.*\bfrom (the )?graveyards?\b.*\bto (your|their|owner\'s) hands?\b',
+    re.IGNORECASE,
+)
+DISCARD_RE = re.compile(r'\discards?\b', re.IGNORECASE)
 
 REANIMATE_RE = re.compile(
-    r'\b(return|put)(s)?\b.*\bgraveyard(s)?\b.*\b(battlefield|play)(s)?\b',
+    r'\b(return|put)s?\b.*\bgraveyards?\b.*\b(battlefield|play)s?\b',
     re.IGNORECASE,
 )
 
@@ -101,11 +104,11 @@ DESTROY_MASS_RE = re.compile(
     r'\b(destroy|exile)\b.*\b(all|each)\b(?!.*\byou control\b)'
 )
 
-DAMAGE_RE = re.compile(r'\bdeal(s)?.*\bdamage\b', re.IGNORECASE)
+DAMAGE_RE = re.compile(r'\bdeals?.*\bdamage\b', re.IGNORECASE)
 OPP_DAMAGE_RE = re.compile(
     r'\b(any target|that player|target opponent|each opponent)\b'
 )
-SELF_ONLY_RE = re.compile(r'\byou\b.*\bdamage\b|\bdeal(s)?\b.*\byou\b')
+SELF_ONLY_RE = re.compile(r'\byou\b.*\bdamage\b|\bdeals?\b.*\byou\b')
 
 BOUNCE_RE = re.compile(
     r'\breturn\b.*\bto (its owner\'s|their|your) hand\b', re.IGNORECASE
@@ -115,19 +118,19 @@ TOP_LIBRARY_RE = re.compile(
 )
 
 MINUS_X_RE = re.compile(
-    r'\b(target|creature)\b.*\bget(s)? -\d+/-\d+\b', re.IGNORECASE
+    r'\b(target|creature)\b.*\bgets? -\d+/-\d+\b', re.IGNORECASE
 )
 MINUS_X_MASS_RE = re.compile(
-    r'\b(each|all)\b.*\bget(s)? -\d+/-\d+\b', re.IGNORECASE
+    r'\b(each|all)\b.*\bgets? -\d+/-\d+\b', re.IGNORECASE
 )
 
-MANA_SYMBOL_RE = re.compile(r'\{([^}]+)\}', re.IGNORECASE)
-ANY_COLOR_RE = re.compile(r'\badd\b.*\bany\b.*\bcolor(s)?\b')
+MANA_SYMBOL_RE = re.compile(r'\{(?:[WUBRGCXPS]|\d+|[WUBRGCXPS]/[WUBRGCXPS]|\d+/[WUBRGCXPS])\}', re.IGNORECASE)
+ANY_COLOR_RE = re.compile(r'\badd\b.*\bmana\b.*\bany\b.*\bcolors?\b')
 COST_REDUCTION_RE = re.compile(r'cost.*less to cast', re.IGNORECASE)
 
 NON_SCORING_PATTERNS = [
-    r"\b(this|your) creature(s)? can't (attack or block|attack|block)\b[.\s]*(unless.*)?",
-    r'\b(this|your) creature(s)? enter(s)? tapped\b',
+    r"\b(this|your) creatures? can't (attack or block|attack|block)\b[.\s]*(unless.*)?",
+    r'\b(this|your) creatures? enters? tapped\b',
     r'\bsacrifice (this|a) creature\b[.\s]*(unless.*)?',
     r'\bas an additional cost to cast this spell\b',
     r"'s power and toughness are each equal to\b",
@@ -149,3 +152,5 @@ CLAUSES_RE = re.compile(r'\.\s+|\bthen\b', re.IGNORECASE)
 SUBCLAUSE_RE = re.compile(
     r'\band\b(?=\s+(you|target|each|all|an|a|\d))', re.IGNORECASE
 )
+
+COLON_OUTSIDE_QUOTES = re.compile(r':(?=(?:[^"]*"[^"]*")*[^"]*$)')

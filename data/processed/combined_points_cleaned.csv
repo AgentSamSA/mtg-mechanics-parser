@@ -44,7 +44,7 @@ c000811e-bde7-4840-a3bb-9714d5c977eb,Orcish Artillery,lea,Limited Edition Alpha,
 {B}: Regenerate this creature. (The next time this creature would be destroyed this turn, instead tap it, remove it from combat, and heal all damage on it.)",['B'],uncommon,5
 f8d82a00-c10e-4b9e-9642-d05706900a97,Wall of Brambles,lea,Limited Edition Alpha,1993-08-05,1993,3.0,2,3,2.0,3.0,['Defender'],"Defender (This creature can't attack.)
 {G}: Regenerate this creature.",['G'],uncommon,5
-16cf1cf9-6900-406c-a5b4-0e5750f530e0,Plague Rats,lea,Limited Edition Alpha,1993-08-05,1993,3.0,*,*,,,[],Plague Rats's power and toughness are each equal to the number of creatures named Plague Rats on the battlefield.,['B'],common,6
+16cf1cf9-6900-406c-a5b4-0e5750f530e0,Plague Rats,lea,Limited Edition Alpha,1993-08-05,1993,3.0,*,*,3.0,3.0,[],Plague Rats's power and toughness are each equal to the number of creatures named Plague Rats on the battlefield.,['B'],common,6
 759af941-f6a3-4726-91f2-9b1e4e55ea71,Hypnotic Specter,lea,Limited Edition Alpha,1993-08-05,1993,3.0,2,2,2.0,2.0,['Flying'],"Flying
 Whenever this creature deals damage to an opponent, that player discards a card at random.",['B'],uncommon,7
 5e961d15-5972-4e4b-9385-1cd7cd7c6bbe,Prodigal Sorcerer,lea,Limited Edition Alpha,1993-08-05,1993,3.0,1,1,1.0,1.0,[],{T}: This creature deals 1 damage to any target.,['U'],common,4
@@ -70,7 +70,7 @@ b2a8fcf9-2ec2-40a9-9955-90f8605b11a3,War Mammoth,lea,Limited Edition Alpha,1993-
 {R}: This creature gets +1/+0 until end of turn. If this ability has been activated four or more times this turn, sacrifice this creature at the beginning of the next end step.",['R'],uncommon,7
 e740ce2f-2134-473c-afa1-1b6d2d1e38ef,Giant Spider,lea,Limited Edition Alpha,1993-08-05,1993,4.0,2,4,2.0,4.0,['Reach'],Reach (This creature can block creatures with flying.),['G'],common,7
 01f07ab9-3c3e-4fea-9cd6-543a5b7056b8,Roc of Kher Ridges,lea,Limited Edition Alpha,1993-08-05,1993,4.0,3,3,3.0,3.0,['Flying'],Flying,['R'],rare,7
-acc869f8-dcbe-4d57-baa0-3eef4aceb251,Keldon Warlord,lea,Limited Edition Alpha,1993-08-05,1993,4.0,*,*,,,[],Keldon Warlord's power and toughness are each equal to the number of non-Wall creatures you control.,['R'],uncommon,8
+acc869f8-dcbe-4d57-baa0-3eef4aceb251,Keldon Warlord,lea,Limited Edition Alpha,1993-08-05,1993,4.0,*,*,4.0,4.0,[],Keldon Warlord's power and toughness are each equal to the number of non-Wall creatures you control.,['R'],uncommon,8
 eb098958-50d3-4476-ba74-382033703ff9,Wall of Swords,lea,Limited Edition Alpha,1993-08-05,1993,4.0,3,5,3.0,5.0,"['Flying', 'Defender']","Defender (This creature can't attack.)
 Flying",['W'],uncommon,8
 68c0c04e-b0d5-4721-83bf-bf18e8b7e680,Scavenging Ghoul,lea,Limited Edition Alpha,1993-08-05,1993,4.0,2,2,2.0,2.0,[],"At the beginning of each end step, put a corpse counter on this creature for each creature that died this turn.
@@ -107,12 +107,12 @@ Whenever this creature blocks or becomes blocked by a non-Wall creature, destroy
 aeaccab9-3e2c-4a40-a483-52c4972b2014,Vesuvan Doppelganger,lea,Limited Edition Alpha,1993-08-05,1993,5.0,0,0,0.0,0.0,[],"You may have this creature enter as a copy of any creature on the battlefield, except it doesn't copy that creature's color and it has ""At the beginning of your upkeep, you may have this creature become a copy of target creature, except it doesn't copy that creature's color and it has this ability.""",['U'],rare,2
 c470fbe1-0538-46ec-8741-3143f5e78af8,Water Elemental,lea,Limited Edition Alpha,1993-08-05,1993,5.0,5,4,5.0,4.0,[],,['U'],uncommon,11
 3c97c311-7ad5-47ec-b421-f6c3bfbda9fb,Earth Elemental,lea,Limited Edition Alpha,1993-08-05,1993,5.0,4,5,4.0,5.0,[],,['R'],uncommon,10
-8d134a60-e1e5-4163-8bdc-36af91567185,Gaea's Liege,lea,Limited Edition Alpha,1993-08-05,1993,6.0,*,*,,,[],"As long as Gaea's Liege isn't attacking, its power and toughness are each equal to the number of Forests you control. As long as Gaea's Liege is attacking, its power and toughness are each equal to the number of Forests defending player controls.
+8d134a60-e1e5-4163-8bdc-36af91567185,Gaea's Liege,lea,Limited Edition Alpha,1993-08-05,1993,6.0,*,*,6.0,6.0,[],"As long as Gaea's Liege isn't attacking, its power and toughness are each equal to the number of Forests you control. As long as Gaea's Liege is attacking, its power and toughness are each equal to the number of Forests defending player controls.
 {T}: Target land becomes a Forest until this creature leaves the battlefield.",['G'],rare,13
 6a462a69-3e42-41de-a3aa-a488d9f38d69,Craw Wurm,lea,Limited Edition Alpha,1993-08-05,1993,6.0,6,4,6.0,4.0,[],,['G'],common,11
 2847c8a0-f6aa-4e4a-a7b8-fc116436a264,Demonic Hordes,lea,Limited Edition Alpha,1993-08-05,1993,6.0,5,5,5.0,5.0,[],"{T}: Destroy target land.
 At the beginning of your upkeep, unless you pay {B}{B}{B}, tap this creature and sacrifice a land of an opponent's choice.",['B'],rare,13
-375932e6-1b3e-48dc-8154-9b664c3add34,Nightmare,lea,Limited Edition Alpha,1993-08-05,1993,6.0,*,*,,,['Flying'],"Flying (This creature can't be blocked except by creatures with flying or reach.)
+375932e6-1b3e-48dc-8154-9b664c3add34,Nightmare,lea,Limited Edition Alpha,1993-08-05,1993,6.0,*,*,6.0,6.0,['Flying'],"Flying (This creature can't be blocked except by creatures with flying or reach.)
 Nightmare's power and toughness are each equal to the number of Swamps you control.",['B'],rare,13
 eb97c8db-ac6c-476c-b14d-87785e9c82f0,Clockwork Beast,lea,Limited Edition Alpha,1993-08-05,1993,6.0,0,4,0.0,4.0,[],"This creature enters with seven +1/+0 counters on it.
 At end of combat, if this creature attacked or blocked this combat, remove a +1/+0 counter from it.
@@ -249,7 +249,7 @@ bf0f3d2a-6b6a-4822-888d-1d897a8b5aea,Serpentine Basilisk,ons,Onslaught,2002-10-0
 Morph {1}{G}{G} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)",['G'],uncommon,8
 0aab31b7-7196-4843-b4f1-c15e9e05dd86,Gravel Slinger,ons,Onslaught,2002-10-07,2002,4.0,1,3,1.0,3.0,['Morph'],"{T}: This creature deals 1 damage to target attacking or blocking creature.
 Morph {1}{W} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)",['W'],common,6
-6c8a8a7a-ee4f-4005-b6a2-fc418e396748,Reckless One,ons,Onslaught,2002-10-07,2002,4.0,*,*,,,['Haste'],"Haste
+6c8a8a7a-ee4f-4005-b6a2-fc418e396748,Reckless One,ons,Onslaught,2002-10-07,2002,4.0,*,*,4.0,4.0,['Haste'],"Haste
 Reckless One's power and toughness are each equal to the number of Goblins on the battlefield.",['R'],uncommon,10
 67b4a4bc-0b02-4cef-b5c8-41c839eaf0cd,Ascending Aven,ons,Onslaught,2002-10-07,2002,4.0,3,2,3.0,2.0,"['Flying', 'Morph']","Flying
 This creature can block only creatures with flying.
@@ -259,7 +259,7 @@ At the beginning of the end step, destroy all Goblins.",['R'],rare,8
 c9823e5f-d0f8-4d28-8b3b-55f94ea9d76f,Crude Rampart,ons,Onslaught,2002-10-07,2002,4.0,4,5,4.0,5.0,"['Morph', 'Defender']","Defender (This creature can't attack.)
 Morph {4}{W} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)",['W'],uncommon,10
 715b4a12-a392-411b-935b-7bd64a270421,Gustcloak Sentinel,ons,Onslaught,2002-10-07,2002,4.0,3,3,3.0,3.0,[],"Whenever this creature becomes blocked, you may untap it and remove it from combat.",['W'],uncommon,7
-bd8d0498-53f9-484c-a59a-78daca468859,Nameless One,ons,Onslaught,2002-10-07,2002,4.0,*,*,,,['Morph'],"Nameless One's power and toughness are each equal to the number of Wizards on the battlefield.
+bd8d0498-53f9-484c-a59a-78daca468859,Nameless One,ons,Onslaught,2002-10-07,2002,4.0,*,*,4.0,4.0,['Morph'],"Nameless One's power and toughness are each equal to the number of Wizards on the battlefield.
 Morph {2}{U} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)",['U'],uncommon,9
 99002f0c-762b-4714-afe3-5b011350aefd,Rummaging Wizard,ons,Onslaught,2002-10-07,2002,4.0,2,2,2.0,2.0,['Surveil'],{2}{U}: Surveil 1. (Look at the top card of your library. You may put that card into your graveyard.),['U'],uncommon,5
 7f46839f-175d-4292-8057-c3e0da206075,Haunted Cadaver,ons,Onslaught,2002-10-07,2002,4.0,2,2,2.0,2.0,['Morph'],"Whenever this creature deals combat damage to a player, you may sacrifice it. If you do, that player discards three cards.
@@ -275,21 +275,21 @@ When this creature dies, each opponent discards a card.",['B'],common,8
 {T}, Sacrifice this creature: It deals 2 damage to target attacking or blocking creature.",['W'],common,6
 a932e265-604a-4aed-b8a9-6234a3db16a5,Snarling Undorak,ons,Onslaught,2002-10-07,2002,4.0,3,3,3.0,3.0,['Morph'],"{2}{G}: Target Beast creature gets +1/+1 until end of turn.
 Morph {1}{G}{G} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)",['G'],common,8
-23425b11-e40d-4f68-8903-3084ad45319f,Doubtless One,ons,Onslaught,2002-10-07,2002,4.0,*,*,,,[],"Doubtless One's power and toughness are each equal to the number of Clerics on the battlefield.
+23425b11-e40d-4f68-8903-3084ad45319f,Doubtless One,ons,Onslaught,2002-10-07,2002,4.0,*,*,4.0,4.0,[],"Doubtless One's power and toughness are each equal to the number of Clerics on the battlefield.
 Whenever this creature deals damage, you gain that much life.",['W'],uncommon,9
 cfaa0d5d-d9f1-4586-a7b1-6576a58c0f1e,Symbiotic Elf,ons,Onslaught,2002-10-07,2002,4.0,2,2,2.0,2.0,[],"When this creature dies, create two 1/1 green Insect creature tokens.",['G'],common,9
 f6e75db5-b119-4401-942c-bbaeeb694761,Embermage Goblin,ons,Onslaught,2002-10-07,2002,4.0,1,1,1.0,1.0,[],"When this creature enters, you may search your library for a card named Embermage Goblin, reveal it, put it into your hand, then shuffle.
 {T}: This creature deals 1 damage to any target.",['R'],uncommon,6
 ba0291ad-09ea-4fee-baa9-7778fbbb6ba7,Daru Cavalier,ons,Onslaught,2002-10-07,2002,4.0,2,2,2.0,2.0,['First strike'],"First strike
 When this creature enters, you may search your library for a card named Daru Cavalier, reveal it, put it into your hand, then shuffle.",['W'],common,6
-27d98b94-a8a1-442b-8940-4ffab51b5164,Soulless One,ons,Onslaught,2002-10-07,2002,4.0,*,*,,,[],Soulless One's power and toughness are each equal to the number of Zombies on the battlefield plus the number of Zombie cards in all graveyards.,['B'],uncommon,8
+27d98b94-a8a1-442b-8940-4ffab51b5164,Soulless One,ons,Onslaught,2002-10-07,2002,4.0,*,*,4.0,4.0,[],Soulless One's power and toughness are each equal to the number of Zombies on the battlefield plus the number of Zombie cards in all graveyards.,['B'],uncommon,8
 b7817579-df4d-41db-bb90-2aabac58f299,Cabal Executioner,ons,Onslaught,2002-10-07,2002,4.0,2,2,2.0,2.0,['Morph'],"Whenever this creature deals combat damage to a player, that player sacrifices a creature of their choice.
 Morph {3}{B}{B} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)",['B'],uncommon,7
 5c9f4fde-b96f-41bf-b214-f83511df1f8e,Gustcloak Skirmisher,ons,Onslaught,2002-10-07,2002,4.0,2,3,2.0,3.0,['Flying'],"Flying
 Whenever this creature becomes blocked, you may untap it and remove it from combat.",['W'],uncommon,7
 ee771e66-72f8-480f-9920-92c68ab93c3b,Ravenous Baloth,ons,Onslaught,2002-10-07,2002,4.0,4,4,4.0,4.0,[],Sacrifice a Beast: You gain 4 life.,['G'],rare,10
 0bb860c5-41af-494e-9b0f-d05d6fa8255c,Elvish Pathcutter,ons,Onslaught,2002-10-07,2002,4.0,1,2,1.0,2.0,[],{2}{G}: Target Elf creature gains forestwalk until end of turn. (It can't be blocked as long as defending player controls a Forest.),['G'],common,4
-c4ec45e9-1a4d-42a0-beca-e4dcdfc88fa3,Heedless One,ons,Onslaught,2002-10-07,2002,4.0,*,*,,,['Trample'],"Trample
+c4ec45e9-1a4d-42a0-beca-e4dcdfc88fa3,Heedless One,ons,Onslaught,2002-10-07,2002,4.0,*,*,4.0,4.0,['Trample'],"Trample
 Heedless One's power and toughness are each equal to the number of Elves on the battlefield.",['G'],uncommon,9
 3db0207d-d80b-4915-b157-6a3e5b3a154e,Grinning Demon,ons,Onslaught,2002-10-07,2002,4.0,6,6,6.0,6.0,['Morph'],"At the beginning of your upkeep, you lose 2 life.
 Morph {2}{B}{B} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)",['B'],rare,15
@@ -505,7 +505,7 @@ f8fac28d-adf4-47e9-bdd3-8402cbf0f228,Boggart Loggers,lrw,Lorwyn,2007-10-12,2007,
 {2}{B}, Sacrifice this creature: Destroy target Treefolk or Forest.",['B'],common,6
 97b0b719-d948-4671-97ba-1b2be8cc55e4,Springjack Knight,lrw,Lorwyn,2007-10-12,2007,3.0,2,1,2.0,1.0,['Clash'],"Whenever this creature attacks, clash with an opponent. If you win, target creature gains double strike until end of turn. (Each clashing player reveals the top card of their library, then puts that card on their choice of the top or bottom. A player wins if their card had a greater mana value.)",['W'],common,5
 b7ebd207-43e3-49eb-86ca-b5987ef9e22f,Lys Alana Scarblade,lrw,Lorwyn,2007-10-12,2007,3.0,1,1,1.0,1.0,[],"{T}, Discard an Elf card: Target creature gets -X/-X until end of turn, where X is the number of Elves you control.",['B'],uncommon,4
-f7139c70-dfcc-41ae-9d0d-b6e8c07a063d,Jagged-Scar Archers,lrw,Lorwyn,2007-10-12,2007,3.0,*,*,,,[],"Jagged-Scar Archers's power and toughness are each equal to the number of Elves you control.
+f7139c70-dfcc-41ae-9d0d-b6e8c07a063d,Jagged-Scar Archers,lrw,Lorwyn,2007-10-12,2007,3.0,*,*,3.0,3.0,[],"Jagged-Scar Archers's power and toughness are each equal to the number of Elves you control.
 {T}: This creature deals damage equal to its power to target creature with flying.",['G'],uncommon,7
 767c1f97-03de-474d-9112-e7521ba3b3f3,Avian Changeling,lrw,Lorwyn,2007-10-12,2007,3.0,2,2,2.0,2.0,"['Changeling', 'Flying']","Changeling (This card is every creature type.)
 Flying",['W'],common,6
@@ -551,7 +551,7 @@ fcc7dd32-2198-446c-9144-e50d56ef53ed,Briarhorn,lrw,Lorwyn,2007-10-12,2007,4.0,3,
 When this creature enters, target creature gets +3/+3 until end of turn.
 Evoke {1}{G} (You may cast this spell for its evoke cost. If you do, it's sacrificed when it enters.)",['G'],uncommon,9
 a56b3434-7478-4704-b04b-92f32a1bc462,Hillcomber Giant,lrw,Lorwyn,2007-10-12,2007,4.0,3,3,3.0,3.0,"['Landwalk', 'Mountainwalk']",Mountainwalk (This creature can't be blocked as long as defending player controls a Mountain.),['W'],common,7
-3fd25479-b65c-48f7-bb74-95d49af65ac1,Dauntless Dourbark,lrw,Lorwyn,2007-10-12,2007,4.0,*,*,,,[],"Dauntless Dourbark's power and toughness are each equal to the number of Forests you control plus the number of Treefolk you control.
+3fd25479-b65c-48f7-bb74-95d49af65ac1,Dauntless Dourbark,lrw,Lorwyn,2007-10-12,2007,4.0,*,*,4.0,4.0,[],"Dauntless Dourbark's power and toughness are each equal to the number of Forests you control plus the number of Treefolk you control.
 This creature has trample as long as you control another Treefolk.",['G'],rare,9
 6a3dee57-9912-4c51-872e-2ec47acdaf52,Changeling Berserker,lrw,Lorwyn,2007-10-12,2007,4.0,5,3,5.0,3.0,"['Haste', 'Champion', 'Changeling']","Changeling (This card is every creature type.)
 Haste
@@ -1122,7 +1122,7 @@ Whenever this creature mutates, exile cards from the top of your library until y
 b42147e1-cf90-4c12-8abe-7f2931d0607c,Cavern Whisperer,iko,Ikoria: Lair of Behemoths,2020-04-24,2020,5.0,4,4,4.0,4.0,"['Mutate', 'Menace']","Mutate {3}{B} (If you cast this spell for its mutate cost, put it over or under target non-Human creature you own. They mutate into the creature on top plus all abilities from under it.)
 Menace (This creature can't be blocked except by two or more creatures.)
 Whenever this creature mutates, each opponent discards a card.",['B'],common,13
-6985c8a9-9299-461b-8bef-bd2b2c739c11,"Obosh, the Preypiercer",iko,Ikoria: Lair of Behemoths,2020-04-24,2020,5.0,3,5,3.0,5.0,['Companion'],"Companion — Your starting deck contains only cards with odd mana values and land cards. (If this card is your chosen companion, you may put it into your hand from outside the game for {3} as a sorcery.)
+6985c8a9-9299-461b-8bef-bd2b2c739c11,"Obosh, the Preypiercer",iko,Ikoria: Lair of Behemoths,2020-04-24,2020,5.0,3,5,3.0,5.0,"['Companion', 'Double']","Companion — Your starting deck contains only cards with odd mana values and land cards. (If this card is your chosen companion, you may put it into your hand from outside the game for {3} as a sorcery.)
 If a source you control with an odd mana value would deal damage to a permanent or player, it deals double that damage to that permanent or player instead.","['B', 'R']",rare,10
 4056c1dd-9db4-4ff6-9dc5-a69e8da1d2a6,Rooting Moloch,iko,Ikoria: Lair of Behemoths,2020-04-24,2020,5.0,4,4,4.0,4.0,['Cycling'],"When this creature enters, exile target card with a cycling ability from your graveyard. Until the end of your next turn, you may play that card.
 Cycling {2} ({2}, Discard this card: Draw a card.)",['R'],uncommon,12
@@ -1263,7 +1263,7 @@ b254ca74-2a96-4590-91bc-650f407daf5d,Manifold Mouse,blb,Bloomburrow,2024-08-02,2
 At the beginning of combat on your turn, target Mouse you control gains your choice of double strike or trample until end of turn.",['R'],rare,8
 9d14c7bd-7802-401c-b02b-c7f3c51b007f,Wandertale Mentor,blb,Bloomburrow,2024-08-02,2024,2.0,2,2,2.0,2.0,[],"Whenever you expend 4, put a +1/+1 counter on this creature. (You expend 4 as you spend your fourth total mana to cast spells during a turn.)
 {T}: Add {R} or {G}.","['G', 'R']",uncommon,7
-f293da27-e42d-4e87-8b61-d3c27e4c6d71,Burrowguard Mentor,blb,Bloomburrow,2024-08-02,2024,2.0,*,*,,,['Trample'],"Trample
+f293da27-e42d-4e87-8b61-d3c27e4c6d71,Burrowguard Mentor,blb,Bloomburrow,2024-08-02,2024,2.0,*,*,2.0,2.0,['Trample'],"Trample
 Burrowguard Mentor's power and toughness are each equal to the number of creatures you control.","['G', 'W']",uncommon,5
 b173245e-2009-48ff-ac42-5f28d12aec79,Fireglass Mentor,blb,Bloomburrow,2024-08-02,2024,2.0,2,1,2.0,1.0,[],"At the beginning of your second main phase, if an opponent lost life this turn, exile the top two cards of your library. Choose one of them. Until end of turn, you may play that card.","['B', 'R']",uncommon,5
 b2252471-01ca-4d58-aa99-4ab0aa5eae12,Stormcatch Mentor,blb,Bloomburrow,2024-08-02,2024,2.0,1,1,1.0,1.0,"['Prowess', 'Haste']","Haste
@@ -1423,7 +1423,7 @@ You may play an additional land on each of your turns.","['G', 'R']",mythic,16
 This creature enters with a +1/+1 counter on it if an opponent lost life this turn.",['R'],common,10
 ef8fab12-d7d2-4c21-8b8c-41627048ac8b,Lightshell Duo,blb,Bloomburrow,2024-08-02,2024,4.0,3,4,3.0,4.0,"['Surveil', 'Prowess']","Prowess (Whenever you cast a noncreature spell, this creature gets +1/+1 until end of turn.)
 When this creature enters, surveil 2. (Look at the top two cards of your library, then put any number of them into your graveyard and the rest on top of your library in any order.)",['U'],common,10
-027989e7-20c4-4773-b6b4-20337cc5fe8c,"Eluge, the Shoreless Sea",blb,Bloomburrow,2024-08-02,2024,4.0,*,*,,,[],"Eluge's power and toughness are each equal to the number of Islands you control.
+027989e7-20c4-4773-b6b4-20337cc5fe8c,"Eluge, the Shoreless Sea",blb,Bloomburrow,2024-08-02,2024,4.0,*,*,4.0,4.0,[],"Eluge's power and toughness are each equal to the number of Islands you control.
 Whenever Eluge enters or attacks, put a flood counter on target land. It's an Island in addition to its other types for as long as it has a flood counter on it.
 The first instant or sorcery spell you cast each turn costs {U} (or {1}) less to cast for each land you control with a flood counter on it.",['U'],mythic,10
 b6b2d63f-5b8c-47ee-8712-58596e0e9e94,Dreamdew Entrancer,blb,Bloomburrow,2024-08-02,2024,4.0,3,4,3.0,4.0,['Reach'],"Reach
@@ -1505,7 +1505,7 @@ Whenever another nontoken Bird you control enters, create a 1/1 blue Fish creatu
 Ward—Discard a card.
 Creatures your opponents control have base toughness 1.",['B'],mythic,18
 e4d52559-7624-48b2-96ba-e52ada6c507a,Daring Waverider,blb,Bloomburrow,2024-08-02,2024,6.0,4,4,4.0,4.0,[],"When this creature enters, you may cast target instant or sorcery card with mana value 4 or less from your graveyard without paying its mana cost. If that spell would be put into your graveyard, exile it instead.",['U'],uncommon,11
-97a84e9d-bfc4-4ca2-b1e8-908dba56ccdb,"Lumra, Bellow of the Woods",blb,Bloomburrow,2024-08-02,2024,6.0,*,*,,,"['Reach', 'Vigilance', 'Mill']","Vigilance, reach
+97a84e9d-bfc4-4ca2-b1e8-908dba56ccdb,"Lumra, Bellow of the Woods",blb,Bloomburrow,2024-08-02,2024,6.0,*,*,6.0,6.0,"['Reach', 'Vigilance', 'Mill']","Vigilance, reach
 Lumra's power and toughness are each equal to the number of lands you control.
 When Lumra enters, mill four cards. Then return all land cards from your graveyard to the battlefield tapped.",['G'],mythic,16
 b0747a4f-d041-4750-aef5-a5d101696f65,Galewind Moose,blb,Bloomburrow,2024-08-02,2024,6.0,6,6,6.0,6.0,"['Reach', 'Vigilance', 'Trample', 'Flash']","Flash
@@ -1513,7 +1513,7 @@ Vigilance, reach, trample",['G'],uncommon,18
 2c75623c-59f4-4449-ab43-9d1225185ad9,Rottenmouth Viper,blb,Bloomburrow,2024-08-02,2024,6.0,6,6,6.0,6.0,[],"As an additional cost to cast this spell, you may sacrifice any number of nonland permanents. This spell costs {1} less to cast for each permanent sacrificed this way.
 Whenever this creature enters or attacks, put a blight counter on it. Then for each blight counter on it, each opponent loses 4 life unless that player sacrifices a nonland permanent of their choice or discards a card.",['B'],mythic,16
 29423a9a-31a6-4605-8b49-a75895038a3a,Wick's Patrol,blb,Bloomburrow,2024-08-02,2024,6.0,5,3,5.0,3.0,['Mill'],"When this creature enters, mill three cards. When you do, target creature an opponent controls gets -X/-X until end of turn, where X is the greatest mana value among cards in your graveyard.",['B'],uncommon,12
-e9c6e4e6-0c3f-4048-93e6-161a1221ea36,"Byrke, Long Ear of the Law",blb,Bloomburrow,2024-08-02,2024,6.0,4,4,4.0,4.0,['Vigilance'],"Vigilance
+e9c6e4e6-0c3f-4048-93e6-161a1221ea36,"Byrke, Long Ear of the Law",blb,Bloomburrow,2024-08-02,2024,6.0,4,4,4.0,4.0,"['Vigilance', 'Double']","Vigilance
 When Byrke enters, put a +1/+1 counter on each of up to two target creatures.
 Whenever a creature you control with a +1/+1 counter on it attacks, double the number of +1/+1 counters on it.","['G', 'W']",mythic,13
 3c345e24-1726-45ac-91ca-e348d1e7acfe,Eddymurk Crab,blb,Bloomburrow,2024-08-02,2024,7.0,5,5,5.0,5.0,['Flash'],"Flash

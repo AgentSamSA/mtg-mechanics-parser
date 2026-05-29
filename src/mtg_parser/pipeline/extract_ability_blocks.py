@@ -20,5 +20,5 @@ def extract_blocks(text: str, card_keywords):
             continue
         
         blocks.append(line)
-    
+
     return blocks
