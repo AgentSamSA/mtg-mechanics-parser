@@ -17,6 +17,7 @@ from mtg_parser.features.extractors.special import special_features
 from mtg_parser.features.extractors.static import static_features
 from mtg_parser.features.extractors.tokens import has_tokens
 from mtg_parser.features.extractors.triggered import triggered_features
+from mtg_parser.features.extractors.keyword_counters import keyword_counter_features
 
 from mtg_parser.features.feature_extractor import AbilityFeaturePipeline
 
@@ -36,6 +37,7 @@ FEATURES = [
     static_features,
     has_tokens,
     triggered_features,
+    keyword_counter_features
 ]
 
 FEATURE_WEIGHTS = {
@@ -61,6 +63,7 @@ FEATURE_WEIGHTS = {
     'mana_produced': 1,
     'mana_reduction': 1,
     'has_direct_damage': 1,
+    'keyword_counters': 1
 }
 
 KEYWORD_WEIGHTS = {

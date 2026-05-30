@@ -8,6 +8,7 @@ from datetime import date
 
 from mtg_parser.parsing.ability import Ability
 
+
 @dataclass
 class CardAbilityBundle:
     oracle_id: str
@@ -16,5 +17,5 @@ class CardAbilityBundle:
     set_name: str
     released_at: date
     cmc: float
-    
+
     abilities: list[Ability]

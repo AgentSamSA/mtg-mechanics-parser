@@ -18,5 +18,6 @@ def power_bonus(power: float) -> float:
     else:
         return 0
 
+
 def score_pt(power: float, toughness: float) -> float:
     return power + toughness + power_bonus(power)

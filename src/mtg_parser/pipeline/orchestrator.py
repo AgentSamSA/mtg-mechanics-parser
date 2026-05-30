@@ -20,20 +20,16 @@ def build_card_ability_bundle(row):
 
     abilities = [parse_ability(b) for b in blocks]
 
-    return(CardAbilityBundle
-        (
-            oracle_id=row['oracle_id'],
-            name=row['name'],
-            set=row['set'],
-            set_name=row['set_name'],
-            released_at=row['released_at'],
-            cmc=row['cmc'],
-            abilities=abilities
-        )
+    return CardAbilityBundle(
+        oracle_id=row['oracle_id'],
+        name=row['name'],
+        set=row['set'],
+        set_name=row['set_name'],
+        released_at=row['released_at'],
+        cmc=row['cmc'],
+        abilities=abilities
     )
 
+
 def extract_abilities(df):
-    return [
-        build_card_ability_bundle(row)
-        for _, row in df.iterrows()
-    ]
+    return [build_card_ability_bundle(row) for _, row in df.iterrows()]
