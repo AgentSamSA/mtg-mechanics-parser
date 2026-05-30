@@ -31,7 +31,7 @@ def triggered_features(ability: Ability) -> dict[str, int]:
     found_dies = int('dies' in trigger)
 
     found_repeatable = is_repeatable(trigger)
-    
+
     if found_repeatable:
         found_enters = 0
 

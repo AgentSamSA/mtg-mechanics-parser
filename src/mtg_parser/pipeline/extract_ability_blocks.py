@@ -10,15 +10,15 @@ from mtg_parser.parsing.keyword_router import is_keyword_line
 # Extract ability blocks from the oracle text
 def extract_blocks(text: str, card_keywords):
     text = preprocess_oracle_text(text)
-    
+
     blocks = []
     for line in text.split('\n'):
         if not line.strip():
             continue
-        
+
         if is_keyword_line(line, card_keywords):
             continue
-        
+
         blocks.append(line)
 
     return blocks

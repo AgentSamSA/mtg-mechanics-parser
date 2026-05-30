@@ -3,21 +3,15 @@
 
 from mtg_parser.parsing.ability import Ability
 
-from mtg_parser.features.helpers import (
-    get_clauses,
+from mtg_parser.features.utils.parsing import get_clauses
+from mtg_parser.features.utils.mana_utils import (
     count_mana_base,
     has_any_color_mana,
     extract_mana_options
 )
 
-from mtg_parser.constants.searches import (
-    COST_REDUCTION_RE,
-    ADD_RE
-)
+from mtg_parser.constants.searches import COST_REDUCTION_RE, ADD_RE
 
-
-from mtg_parser.utils.text_preprocessing import preprocess_oracle_text
-from mtg_parser.constants.searches import QUANTITY_RE
 
 def mana_production(ability: Ability) -> dict[str, int]:
 
@@ -37,9 +31,9 @@ def mana_production(ability: Ability) -> dict[str, int]:
 
             options = extract_mana_options(clause)
             base = max(options) if options else count_mana_base(clause)
-            
+
             mana += base
-            
+
             if has_any_color_mana(clause):
                 any_color_bonus += 1
 

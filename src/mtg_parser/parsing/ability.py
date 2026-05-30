@@ -8,7 +8,7 @@ from dataclasses import dataclass
 from typing import Optional
 from enum import Enum
 
-from mtg_parser.features.helpers import is_top_level_activated
+from mtg_parser.features.utils.parsing import is_top_level_activated
 
 from mtg_parser.constants.searches import TRIGGER_RE
 

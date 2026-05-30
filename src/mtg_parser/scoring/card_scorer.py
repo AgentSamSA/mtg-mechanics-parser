@@ -9,9 +9,10 @@ from mtg_parser.scoring.pt_scorer import score_pt
 from mtg_parser.scoring.models.card_score import CardScore
 from mtg_parser.features.card_features import CardFeatures
 
+
 def score_card(card: CardFeatures) -> CardScore:
     return CardScore(
         abilities=get_ability_scores(card.abilities),
         keyword=score_keywords(card.keyword_features),
-        pt=score_pt(card.power, card.toughness)
+        pt=score_pt(card.power, card.toughness),
     )

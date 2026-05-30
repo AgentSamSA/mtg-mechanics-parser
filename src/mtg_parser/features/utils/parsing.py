@@ -1,4 +1,4 @@
-"""mtg-mechanics-parser feature extraction helper utilities."""
+"""mtg-mechanics-parser oracle text parsing helper utilities."""
 
 
 from mtg_parser.constants.searches import (
@@ -9,11 +9,11 @@ from mtg_parser.constants.searches import (
     NON_SCORING_RE,
     OPPONENT_RE,
     ALL_PLAYERS_RE,
-    MANA_SYMBOL_RE,
-    ANY_COLOR_RE,
-    ADD_RE,
+    CLEAN_QUOTES_RE,
     COLON_OUTSIDE_QUOTES,
-    OR_SPLIT_RE
+    CHOICE_RE,
+    FROM_AMONG_RE,
+    ENTERS_CHOICE_RE
 )
 
 # Get clauses within each ability from oracle text
@@ -26,6 +26,7 @@ def get_clauses(text: str) -> list[str]:
         final.extend(parts)
 
     return [p.strip() for p in final if p.strip()]
+
 
 # Get total value from text
 def get_count_from_text(clause: str) -> int:
@@ -40,44 +41,38 @@ def get_count_from_text(clause: str) -> int:
 
     return total
 
+
 # Get non-scoring abilities from text
 def is_non_scoring(text: str) -> bool:
     return bool(NON_SCORING_RE.search(text))
 
-# Check ability target (you or opponent)
-def classify_target(clause: str) -> int:
-    if OPPONENT_RE.search(clause):
-        return -1
-    
-    return 1
-
-# See if all players are affected by ability
-def is_all_players_effect(clause: str) -> bool:
-    return bool(ALL_PLAYERS_RE.search(clause))
-
-# Compute the amount of mana produced
-def count_mana_base(clause: str) -> int:
-    symbols = MANA_SYMBOL_RE.findall(clause)
-    
-    if symbols:
-        return len(symbols)
-    
-    return get_count_from_text(clause)
-
-# Check if ability is mana producing
-def is_mana_producing(clause: str) -> bool:
-    return ADD_RE.search(clause) and count_mana_base(clause) > 0
-
-# Check if ability can produce any color mana
-def has_any_color_mana(clause: str) -> bool:
-    return ANY_COLOR_RE.search(clause) is not None
 
 # Ensure activated ability is outside of granted ability
 def is_top_level_activated(block: str) -> bool:
     return bool(COLON_OUTSIDE_QUOTES.search(block))
 
-# Get all mana options from mana ability
-def extract_mana_options(clause: str) -> list[int]:
-    parts = OR_SPLIT_RE.split(clause)
-    
-    return [count_mana_base(p) for p in parts]
+
+# Check ability target (you or opponent)
+def classify_target(clause: str) -> int:
+    if OPPONENT_RE.search(clause):
+        return -1
+
+    return 1
+
+
+# See if all players are affected by ability
+def is_all_players_effect(clause: str) -> bool:
+    return bool(ALL_PLAYERS_RE.search(clause))
+
+
+# Strip text inside quotes
+def strip_quoted_text(effect: str) -> str:
+    return CLEAN_QUOTES_RE.sub('', effect)
+
+# Identify if ability involves choice (is modular)
+def is_modular(text: str) -> bool:
+    return bool(
+        CHOICE_RE.search(text)
+        or FROM_AMONG_RE.search(text)
+        or ENTERS_CHOICE_RE.search(text)
+    )

@@ -3,7 +3,7 @@
 
 from mtg_parser.parsing.ability import Ability, AbilityType
 
-from mtg_parser.features.helpers import is_mana_producing
+from mtg_parser.features.utils.mana_utils import is_mana_producing
 
 from mtg_parser.constants.searches import LIMITER_RE, LIFE_COST_RE
 
@@ -12,7 +12,7 @@ def activated_features(ability: Ability) -> dict[str, int]:
 
     if ability.type != AbilityType.ACTIVATED:
         return {}
-    
+
     if is_mana_producing(ability.normalized_effect()):
         return {}
 

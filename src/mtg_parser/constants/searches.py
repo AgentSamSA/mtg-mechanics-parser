@@ -23,7 +23,7 @@ PT_RE = re.compile(r'(\d+|X|\*)\/(\d+|X|\*)', re.IGNORECASE)
 
 QUANTITY_RE = re.compile(
     r'\b(a|an|one|two|three|four|five|six|seven|eight|nine|ten|x|\d+)\b',
-    re.IGNORECASE,
+    re.IGNORECASE
 )
 WORD_TO_NUM = {
     'a': 1,
@@ -38,12 +38,12 @@ WORD_TO_NUM = {
     'eight': 8,
     'nine': 9,
     'ten': 10,
-    'x': 1,
+    'x': 1
 }
 
 LIMITER_RE = re.compile(
     r'\{t\}|\{q\}|tap|untap|sacrifice|exile|discard|return|\{.*?\}',
-    re.IGNORECASE,
+    re.IGNORECASE
 )
 LIFE_COST_RE = re.compile(r'pay \d+ life', re.IGNORECASE)
 
@@ -58,7 +58,7 @@ ZONE_PATTERNS = [
     r'\breveal(ed)?\b',
     r'\bput .* into\b',
     r'\bshuffle\b',
-    r'\bthis way\b',
+    r'\bthis way\b'
 ]
 
 QUANTIFIER_PATTERNS = [
@@ -69,7 +69,7 @@ QUANTIFIER_PATTERNS = [
     r'\beach player\b',
     r'\ball players\b',
     r'\beach opponent\b',
-    r'\bopponents\b',
+    r'\bopponents\b'
 ]
 
 DRAW_RE = re.compile(r'\bdraws?\b\s+(a\s+)?cards?\b', re.IGNORECASE)
@@ -78,23 +78,23 @@ PUT_INTO_HAND_RE = re.compile(
 )
 RETURN_TO_HAND_RE = re.compile(
     r'\breturns?\b.*\bfrom (the )?graveyards?\b.*\bto (your|their|owner\'s) hands?\b',
-    re.IGNORECASE,
+    re.IGNORECASE
 )
 DISCARD_RE = re.compile(r'\discards?\b', re.IGNORECASE)
 
 REANIMATE_RE = re.compile(
     r'\b(return|put)s?\b.*\bgraveyards?\b.*\b(battlefield|play)s?\b',
-    re.IGNORECASE,
+    re.IGNORECASE
 )
 
 IMPULSE_DRAW_RE = re.compile(
     r'\byou may (cast|play)\b.*\bexiled\b|\bexile\b.*\byou may (cast|play)\b',
-    re.IGNORECASE,
+    re.IGNORECASE
 )
 
 ALL_PLAYERS_RE = re.compile(
     r'\beach player\b|\ball players\b',
-    re.IGNORECASE,
+    re.IGNORECASE
 )
 
 DESTROY_RE = re.compile(
@@ -124,9 +124,18 @@ MINUS_X_MASS_RE = re.compile(
     r'\b(each|all)\b.*\bgets? -\d+/-\d+\b', re.IGNORECASE
 )
 
-MANA_SYMBOL_RE = re.compile(r'\{(?:[WUBRGCXPS]|\d+|[WUBRGCXPS]/[WUBRGCXPS]|\d+/[WUBRGCXPS])\}', re.IGNORECASE)
+MANA_SYMBOL_RE = re.compile(
+    r'\{(?:[WUBRGCXPS]|\d+|[WUBRGCXPS]/[WUBRGCXPS]|\d+/[WUBRGCXPS])\}',
+    re.IGNORECASE
+)
 ANY_COLOR_RE = re.compile(r'\badd\b.*\bmana\b.*\bany\b.*\bcolors?\b')
 COST_REDUCTION_RE = re.compile(r'cost.*less to cast', re.IGNORECASE)
+
+KEYWORD_COUNTER_RE = re.compile(r'\b([a-z ]+?)\s+counters?\b', re.IGNORECASE)
+TWO_COUNTERS_RE = re.compile(r'\b two different counters\b', re.IGNORECASE)
+CHOOSE_N_RE = re.compile(
+    r'\b(one|two|three|\d+)\s+different counters?\b', re.IGNORECASE
+)
 
 NON_SCORING_PATTERNS = [
     r"\b(this|your) creatures? can't (attack or block|attack|block)\b[.\s]*(unless.*)?",
@@ -135,12 +144,16 @@ NON_SCORING_PATTERNS = [
     r'\bas an additional cost to cast this spell\b',
     r"'s power and toughness are each equal to\b",
     r"'s power is equal to\b",
-    r"'s toughness is equal to\b",
+    r"'s toughness is equal to\b"
 ]
 
 NON_SCORING_RE = re.compile(
     '|'.join(f'(?:{p})' for p in NON_SCORING_PATTERNS), re.IGNORECASE
 )
+
+CHOICE_RE = re.compile(r'\byour choice of\b', re.IGNORECASE)
+FROM_AMONG_RE = re.compile(r'\bfrom among\b', re.IGNORECASE)
+ENTERS_CHOICE_RE = re.compile(r'\b(as|when) this enters\b', re.IGNORECASE)
 
 ADD_RE = re.compile(r'\badd\b', re.IGNORECASE)
 OR_RE = re.compile(r'\bor\b', re.IGNORECASE)
