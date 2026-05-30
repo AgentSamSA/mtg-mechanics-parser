@@ -12,8 +12,8 @@ from mtg_parser.constants.searches import (
     CLEAN_QUOTES_RE,
     COLON_OUTSIDE_QUOTES,
     CHOICE_RE,
-    FROM_AMONG_RE,
-    ENTERS_CHOICE_RE
+    COUNTER_CHOICE_RE,
+    FROM_AMONG_RE
 )
 
 # Get clauses within each ability from oracle text
@@ -73,6 +73,6 @@ def strip_quoted_text(effect: str) -> str:
 def is_modular(text: str) -> bool:
     return bool(
         CHOICE_RE.search(text)
+        or COUNTER_CHOICE_RE.search(text)
         or FROM_AMONG_RE.search(text)
-        or ENTERS_CHOICE_RE.search(text)
     )

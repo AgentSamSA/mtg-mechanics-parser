@@ -12,6 +12,10 @@ TRIGGER_RE = re.compile(r'(?:^|—)\s*(Whenever|When|At)\b', re.IGNORECASE)
 PLUS1_COUNTER_RE = re.compile(
     r'\b(put|place|get)\b.*\+1/\+1\s+counters?', re.IGNORECASE
 )
+PLUS_STAT_RE = re.compile(
+    r'\+\d+/\+\d+|gets \+\d+/\+\d+|power and toughness',
+    re.IGNORECASE
+)
 
 TOKEN_EVENT_RE = re.compile(r'\bcreates?\b.*\btokens?\b', re.IGNORECASE)
 CREATURE_TOKEN_RE = re.compile(
@@ -92,10 +96,7 @@ IMPULSE_DRAW_RE = re.compile(
     re.IGNORECASE
 )
 
-ALL_PLAYERS_RE = re.compile(
-    r'\beach player\b|\ball players\b',
-    re.IGNORECASE
-)
+ALL_PLAYERS_RE = re.compile(r'\beach player\b|\ball players\b', re.IGNORECASE)
 
 DESTROY_RE = re.compile(
     r'\b(destroy|exile)\b.*\btarget\b(?!.*\byou control\b)'
@@ -131,8 +132,10 @@ MANA_SYMBOL_RE = re.compile(
 ANY_COLOR_RE = re.compile(r'\badd\b.*\bmana\b.*\bany\b.*\bcolors?\b')
 COST_REDUCTION_RE = re.compile(r'cost.*less to cast', re.IGNORECASE)
 
-KEYWORD_COUNTER_RE = re.compile(r'\b([a-z ]+?)\s+counters?\b', re.IGNORECASE)
-TWO_COUNTERS_RE = re.compile(r'\b two different counters\b', re.IGNORECASE)
+KEYWORD_COUNTER_RE = re.compile(
+    r'\b(enters with|as this enters|choose|from among)\b.*?\b(counter|counters)\b',
+    re.IGNORECASE
+)
 CHOOSE_N_RE = re.compile(
     r'\b(one|two|three|\d+)\s+different counters?\b', re.IGNORECASE
 )
@@ -144,7 +147,7 @@ NON_SCORING_PATTERNS = [
     r'\bas an additional cost to cast this spell\b',
     r"'s power and toughness are each equal to\b",
     r"'s power is equal to\b",
-    r"'s toughness is equal to\b"
+    r"'s toughness is equal to\b",
 ]
 
 NON_SCORING_RE = re.compile(
@@ -152,8 +155,11 @@ NON_SCORING_RE = re.compile(
 )
 
 CHOICE_RE = re.compile(r'\byour choice of\b', re.IGNORECASE)
-FROM_AMONG_RE = re.compile(r'\bfrom among\b', re.IGNORECASE)
-ENTERS_CHOICE_RE = re.compile(r'\b(as|when) this enters\b', re.IGNORECASE)
+COUNTER_CHOICE_RE = re.compile(
+    r'(enters with.*counter|choose.*counter|from among.*counter)',
+    re.IGNORECASE
+)
+FROM_AMONG_RE = re.compile(r'\bfrom among\b\s+(.*)?', re.IGNORECASE)
 
 ADD_RE = re.compile(r'\badd\b', re.IGNORECASE)
 OR_RE = re.compile(r'\bor\b', re.IGNORECASE)
