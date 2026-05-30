@@ -106,9 +106,11 @@ DESTROY_MASS_RE = re.compile(
 )
 
 DAMAGE_RE = re.compile(r'\bdeals?.*\bdamage\b', re.IGNORECASE)
+LIFE_LOSS_RE = re.compile(r'\b(loses?\s+\d+\s+life|loses? life equal to|they lose.*life)\b', re.IGNORECASE)
 OPP_DAMAGE_RE = re.compile(
-    r'\b(any target|that player|target opponent|each opponent)\b'
+    r'\b(any target|that player|that opponent|target opponent|each opponent)\b'
 )
+OTHER_DAMAGE_RE = re.compile(r'\b(they|that player|that opponent)\b', re.IGNORECASE)
 SELF_ONLY_RE = re.compile(r'\byou\b.*\bdamage\b|\bdeals?\b.*\byou\b')
 
 BOUNCE_RE = re.compile(
