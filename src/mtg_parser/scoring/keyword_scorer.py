@@ -5,7 +5,7 @@ Use KeywordFeatures to score keyword value based on keyword weights."""
 
 from mtg_parser.features.keyword_features import KeywordFeatures
 
-from mtg_parser.constants.features import KEYWORD_WEIGHTS
+from mtg_parser.constants.keyword_weights import KEYWORD_WEIGHTS
 
 
 def score_keywords(kf: KeywordFeatures) -> int:

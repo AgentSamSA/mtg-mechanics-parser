@@ -8,7 +8,8 @@ from mtg_parser.parsing.ability import Ability
 from mtg_parser.features.ability_features import AbilityFeatures
 from mtg_parser.scoring.models.ability_score import AbilityScore
 
-from mtg_parser.constants.features import FEATURE_WEIGHTS, ABILITY_PIPELINE
+from mtg_parser.constants.feature_weights import FEATURE_WEIGHTS
+from mtg_parser.features.pipeline import ABILITY_PIPELINE
 
 # Sum individual feature scores for ability
 def score_ability(features: AbilityFeatures) -> int:

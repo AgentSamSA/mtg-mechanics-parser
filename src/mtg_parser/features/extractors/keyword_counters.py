@@ -10,7 +10,7 @@ from mtg_parser.constants.searches import CHOOSE_N_RE
 
 
 def keyword_counter_features(ability: Ability) -> dict[str, int]:
-    effect = ability.normalized_effect
+    effect = ability.normalized_effect()
     
     keywords = extract_keyword_counters(effect)
     

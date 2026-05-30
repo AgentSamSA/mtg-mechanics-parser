@@ -4,12 +4,12 @@
 import re
 
 from mtg_parser.constants.mechanics import KEYWORD_COUNTERS
-from mtg_parser.constants.features import KEYWORD_WEIGHTS
+from mtg_parser.constants.keyword_weights import KEYWORD_WEIGHTS
 from mtg_parser.constants.searches import FROM_AMONG_RE
 
 EXPLICIT_COUNTER_RE = re.compile(
-    r'\b(' + '|'.join(map(re.escape, KEYWORD_COUNTERS)) + r'\s+counters?\b',
-    re.IGNORECASE,
+    r'\b(' + '|'.join(map(re.escape, KEYWORD_COUNTERS)) + r')\s+counters?\b',
+    re.IGNORECASE
 )
 
 # Get explicit keyword counters from ability
@@ -24,7 +24,7 @@ def extract_counter_pool(text: str) -> list[str]:
     if not match:
         return []
 
-    pool_text = match.group(1).lower()
+    pool_text = match.group(0).lower()
 
     raw_items = re.split(r',|\bor\b', pool_text)
 
