@@ -4,7 +4,7 @@ mtg-mechanics-parser is a rules-based parsing and scoring system for creature ca
 
 The project transforms raw card data from [Scryfall](https://scryfall.com/) into structured gameplay features by parsing a card's Oracle text, identifying game mechanics, extracting quantitative features, and assigning a weighted power score.
 
-Unlike traditional tabular datasets, Magic card text encodes structured game rules in natural-language form, including actions, triggered events, costs, restrictions, and continuous effects. As a result, evaluating card strength is a non-trivial task even for experienced *Magic: The Gathering players*, as it requires interpreting mechanics embedded in text rather than explicit structured fields.
+Unlike traditional tabular datasets, *Magic* card text encodes structured game rules in natural-language form, including actions, triggered events, costs, restrictions, and continuous effects. As a result, evaluating card strength is a non-trivial task even for experienced *Magic: The Gathering* players, as it requires interpreting mechanics embedded in text rather than explicit structured fields.
 
 Additionally, similar gameplay mechanics can be expressed through many distinct textual patterns. This makes rule-based parsing challenging, requiring a large set of pattern-matching rules and feature-specific extraction logic.
 
@@ -17,7 +17,7 @@ To address this challenge, this project implements a complete processing pipelin
 * Feature vector generation
 * Weighted card scoring
 
-No external NLP or machine learning libraries are used for mechanic detection; all parsing, classification, and feature extraction logic is implemented using domain-specific systems designed for *Magic: the Gathering* card text.
+No external NLP or machine learning libraries are used for mechanic detection; all parsing, classification, and feature extraction logic is implemented using domain-specific systems designed for *Magic: The Gathering* card text.
 
 The parser currently analyzes creature cards and detects a wide range of gameplay mechanics including removal, card advantage, token generation, mana production, reanimation, counters, triggered abilities, activated abilities, and global effects.
 
@@ -48,7 +48,7 @@ source .venv/bin/activate
 
 ## System Pipeline
 
-mtg-mechanics-parser processes _Magic: The Gathering_ card data from Scryfall and converts a card's Oracle text into structured gameplay features that can be used to estimate card power.
+mtg-mechanics-parser processes *Magic: The Gathering* card data from Scryfall and converts a card's Oracle text into structured gameplay features that can be used to estimate card power.
 
 The main challenge is that identical gameplay mechanics can appear in many syntactically different forms, requiring rule-based pattern matching rather than simple keyword detection.
 
