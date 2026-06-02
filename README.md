@@ -240,8 +240,10 @@ As *Magic* text is incredibly complex, there are certain cases that are currentl
 - Cases of nonscoring text, such as text that exists purely as part of card instantiation (e.g. "This creature enters with an oil counter on it."). See cards like [Evolved Spinoderm](https://scryfall.com/card/one/166/evolved-spinoderm)
 - Many joke cards with mechanics not in the formally defined rules
 
-In general, the parser tends to overscore cards relative to their actual power level, due to the current limitations on handling downsides and nonscoring text.
-This parser also currently only handles creature cards, as they are relatively simple to work with, and most importantly, include a quantifiable set of values (power/toughness) that allows us to establish a baseline. Other card types, such as instants and sorceries, can be incredibly complex and can include very unique text that is hard to score, such as is the case with cards like [Indomitable Creativity](https://scryfall.com/card/aer/85/indomitable-creativity).
+In general, the parser tends to overscore cards relative to their actual power level, due to the current limitations on handling downsides and nonscoring text.  
+This parser also currently only handles creature cards, as they are relatively simple to work with, and most importantly, include a quantifiable set of values (power/toughness) that allows us to establish a baseline.  
+
+Other card types, such as instants and sorceries, can be incredibly complex and can include very unique text that is hard to score, such as is the case with cards like [Indomitable Creativity](https://scryfall.com/card/aer/85/indomitable-creativity).
 
 ## Acknowledgements
 Special thanks to Gavin Gray Valentine, whose [Youtube video](https://www.youtube.com/watch?v=ZD1A_Rcm3_E) is what sparked interest in this project. We can recommend his channel, [Distraction Makers](https://www.youtube.com/@distractionmakers), as a source of valuable game design discussion and insight.
