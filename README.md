@@ -6,7 +6,7 @@ The project transforms raw card data from [Scryfall](https://scryfall.com/) into
 
 Unlike traditional tabular datasets, *Magic* card text encodes structured game rules in natural-language form, including actions, triggered events, costs, restrictions, and continuous effects. As a result, evaluating card strength is a non-trivial task even for experienced *Magic: The Gathering* players, as it requires interpreting mechanics embedded in text rather than explicit structured fields.
 
-Additionally, similar gameplay mechanics can be expressed through many distinct textual patterns. This makes rule-based parsing challenging, requiring a large set of pattern-matching rules and feature-specific extraction logic.
+Additionally, similar gameplay mechanics can be expressed through many distinct textual patterns. This makes rules-based parsing challenging, requiring a large set of pattern-matching rules and feature-specific extraction logic.
 
 To address this challenge, this project implements a complete processing pipeline from scratch:
 
@@ -50,7 +50,7 @@ source .venv/bin/activate
 
 mtg-mechanics-parser processes *Magic: The Gathering* card data from Scryfall and converts a card's Oracle text into structured gameplay features that can be used to estimate card power.
 
-The main challenge is that identical gameplay mechanics can appear in many syntactically different forms, requiring rule-based pattern matching rather than simple keyword detection.
+The main challenge is that identical gameplay mechanics can appear in many syntactically different forms, requiring rules-based pattern matching rather than simple keyword detection.
 
 ```text
 Raw Scryfall Data
