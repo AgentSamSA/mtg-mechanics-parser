@@ -3,7 +3,7 @@
 
 from mtg_parser.parsing.ability import Ability, AbilityType
 
-from mtg_parser.constants.searches import TRIGGER_RE
+from mtg_parser.constants.searches import TRIGGER_RE, UPKEEP_COST_RE, DIES_RE
 
 # Get trigger head
 def get_trigger_head(trigger: str) -> str:
@@ -26,15 +26,22 @@ def triggered_features(ability: Ability) -> dict[str, int]:
         return {}
 
     trigger = ability.normalized_condition()
+    
+    if UPKEEP_COST_RE.search(ability.normalized_effect()):
+        return {}
 
     found_enters = int('enters' in trigger)
-    found_dies = int('dies' in trigger)
+    found_dies = int(bool(DIES_RE.search(trigger)))
 
     found_repeatable = is_repeatable(trigger)
 
     if found_repeatable:
         found_enters = 0
-
+        found_dies = 0
+        
+    if found_enters == 0 and found_dies == 0 and found_repeatable == 0:
+        found_repeatable = 1
+    
     return {
         'enters_trigger': found_enters,
         'dies_trigger': found_dies,

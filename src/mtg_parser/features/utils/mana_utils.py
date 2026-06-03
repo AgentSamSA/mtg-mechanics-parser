@@ -8,7 +8,7 @@ from mtg_parser.constants.searches import (
     ADD_RE,
     COST_REDUCTION_RE,
     ANY_COLOR_RE,
-    OR_SPLIT_RE
+    OR_SPLIT_RE,
 )
 
 # Compute the amount of mana produced
@@ -25,9 +25,11 @@ def count_mana_base(clause: str) -> int:
 def is_mana_producing(clause: str) -> bool:
     return ADD_RE.search(clause) and count_mana_base(clause) > 0
 
+
 # Check if ability is mana reduction
 def is_mana_reduction(clause: str) -> bool:
     return COST_REDUCTION_RE.search(clause) and count_mana_base(clause) > 0
+
 
 # Check if ability can produce any color mana
 def has_any_color_mana(clause: str) -> bool:

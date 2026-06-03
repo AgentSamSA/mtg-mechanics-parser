@@ -6,7 +6,6 @@ from mtg_parser.constants.searches import (
     SUBCLAUSE_RE,
     QUANTITY_RE,
     WORD_TO_NUM,
-    NON_SCORING_RE,
     OPPONENT_RE,
     ALL_PLAYERS_RE,
     CLEAN_QUOTES_RE,
