@@ -13,7 +13,12 @@ from mtg_parser.constants.searches import (
     COLON_OUTSIDE_QUOTES,
     CHOICE_RE,
     COUNTER_CHOICE_RE,
-    FROM_AMONG_RE
+    FROM_AMONG_RE,
+    CANT_ATTACK_BLOCK_RE,
+    ENTER_TAPPED_RE,
+    SELF_SAC_RE,
+    ADDTNL_COST_RE,
+    PT_INIT_RE
 )
 
 # Get clauses within each ability from oracle text
@@ -44,7 +49,11 @@ def get_count_from_text(clause: str) -> int:
 
 # Get non-scoring abilities from text
 def is_non_scoring(text: str) -> bool:
-    return bool(NON_SCORING_RE.search(text))
+    return bool(CANT_ATTACK_BLOCK_RE.search(text)
+                or ENTER_TAPPED_RE.search(text)
+                or SELF_SAC_RE.search(text)
+                or ADDTNL_COST_RE.search(text)
+                or PT_INIT_RE.search(text))
 
 
 # Ensure activated ability is outside of granted ability

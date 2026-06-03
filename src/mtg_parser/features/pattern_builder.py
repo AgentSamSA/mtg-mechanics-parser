@@ -10,13 +10,10 @@ from mtg_parser.constants.searches import QUANTIFIER_PATTERNS
 
 def build_creature_quantifier_patterns():
     types = '|'.join(map(re.escape, CREATURE_TYPES))
-    
+
     return [
-        rf'\ball ({types})s?\b',
-        rf'\bother ({types})s?\b',
-        rf'\beach ({types})s?\b',
-        rf'\b({types})s?.*\byou control\b',
-        rf'\b({types})s?\b(?!.*\byou control\b)',
+        rf'\b(all|other|each)\s+({types})s?\b.*\b(get|gets|have|has|gain|gains|become|becomes)\b',
+        rf'\b({types})s?\s+you control\b.*\b(get|have|gain|become)\b',
     ]
 
 CREATURE_QUANTIFIERS = build_creature_quantifier_patterns()

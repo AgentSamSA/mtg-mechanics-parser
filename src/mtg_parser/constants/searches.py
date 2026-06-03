@@ -10,12 +10,13 @@ ABILITY_WORD_RE = re.compile(r'^[^—–—]+[—–]\s*')
 TRIGGER_RE = re.compile(r'(?:^|—)\s*(Whenever|When|At)\b', re.IGNORECASE)
 
 PLUS1_COUNTER_RE = re.compile(
-    r'\b(put|place|get)\b.*\+1/\+1\s+counters?', re.IGNORECASE
+    r'\b(put|place|get|enters with)\b.*\+1/\+1\s+counters?', re.IGNORECASE
 )
 PLUS_STAT_RE = re.compile(
     r'\+\d+/\+\d+|gets \+\d+/\+\d+|power and toughness',
     re.IGNORECASE
 )
+COUNTER_STAT_RE = re.compile(r'\+\d+/\+\d+\s+counters?', re.IGNORECASE)
 
 TOKEN_EVENT_RE = re.compile(r'\bcreates?\b.*\btokens?\b', re.IGNORECASE)
 CREATURE_TOKEN_RE = re.compile(
@@ -26,7 +27,7 @@ OPPONENT_RE = re.compile(r'\bopponents?\b|\beach opponent\b', re.IGNORECASE)
 PT_RE = re.compile(r'(\d+|X|\*)\/(\d+|X|\*)', re.IGNORECASE)
 
 QUANTITY_RE = re.compile(
-    r'\b(a|an|one|two|three|four|five|six|seven|eight|nine|ten|x|\d+)\b',
+    r'\b(a|an|one|two|three|four|five|six|seven|eight|nine|ten|\d+)\b',
     re.IGNORECASE
 )
 WORD_TO_NUM = {
@@ -42,8 +43,9 @@ WORD_TO_NUM = {
     'eight': 8,
     'nine': 9,
     'ten': 10,
-    'x': 1
 }
+
+VARIABLES_RE = re.compile(r'\bX\b|\bY\b|\bZ\b', re.IGNORECASE)
 
 LIMITER_RE = re.compile(
     r'\{t\}|\{q\}|tap|untap|sacrifice|exile|discard|return|\{.*?\}',
@@ -151,6 +153,26 @@ NON_SCORING_PATTERNS = [
     r"'s power is equal to\b",
     r"'s toughness is equal to\b",
 ]
+
+CANT_ATTACK_BLOCK_RE = re.compile(r"\b(this|your) creatures? can't (attack or block|attack|block)\b[.\s]*(unless.*)?", re.IGNORECASE)
+ENTER_TAPPED_RE = re.compile(r'\b(this|your) creatures? enters? tapped\b', re.IGNORECASE)
+SELF_SAC_RE = re.compile(r'\bsacrifice (this|a) creature\b[.\s]*(unless.*)?', re.IGNORECASE)
+ADDTNL_COST_RE = re.compile(r'\bas an additional cost to cast this spell\b', re.IGNORECASE)
+ENTERS_WITH_RE = re.compile(r'\benters with\b', re.IGNORECASE)
+INIT_CHOOSE_RE = re.compile(
+    r'\b(as|when)\b.*\benters?\b.*\bchoose\b',
+    re.IGNORECASE
+)
+
+PT_INIT_PATTERNS = [
+    r"'s power and toughness are each equal to\b",
+    r"'s power is equal to\b",
+    r"'s toughness is equal to\b",
+]
+
+PT_INIT_RE = re.compile(
+    '|'.join(f'(?:{p})' for p in PT_INIT_PATTERNS), re.IGNORECASE
+)
 
 NON_SCORING_RE = re.compile(
     '|'.join(f'(?:{p})' for p in NON_SCORING_PATTERNS), re.IGNORECASE

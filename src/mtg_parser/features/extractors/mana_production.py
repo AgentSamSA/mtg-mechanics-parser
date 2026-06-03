@@ -10,7 +10,7 @@ from mtg_parser.features.utils.mana_utils import (
     extract_mana_options
 )
 
-from mtg_parser.constants.searches import COST_REDUCTION_RE, ADD_RE
+from mtg_parser.constants.searches import COST_REDUCTION_RE, ADD_RE, VARIABLES_RE
 
 
 def mana_production(ability: Ability) -> dict[str, int]:
@@ -34,8 +34,11 @@ def mana_production(ability: Ability) -> dict[str, int]:
 
             mana += base
 
+            if VARIABLES_RE.search(clause):
+                mana = 1
+
             if has_any_color_mana(clause):
-                any_color_bonus += 1
+                any_color_bonus = 1
 
         if is_reduction:
             reduced += count_mana_base(clause)

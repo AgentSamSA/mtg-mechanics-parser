@@ -6,7 +6,8 @@ from mtg_parser.constants.searches import (
     PT_RE,
     TOKEN_EVENT_RE,
     QUANTITY_RE,
-    WORD_TO_NUM
+    WORD_TO_NUM,
+    COUNTER_STAT_RE
 )
 
 # Parse token ownership
@@ -29,7 +30,7 @@ def extract_pt(clause: str):
 def pt_value(pt_pairs):
     total = 0
     for p, t in pt_pairs:
-        if p == 'X' or t == 'X':
+        if p == 'x' or t == 'x':
             total += 1
         if p.isdigit() and t.isdigit():
             total += int(p) + int(t)
@@ -43,6 +44,7 @@ def get_token_count(clause: str) -> int:
         return 0
 
     clause = PT_RE.sub('', clause)
+    clause = COUNTER_STAT_RE.sub('', clause)
 
     matches = QUANTITY_RE.findall(clause)
 
