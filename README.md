@@ -4,6 +4,8 @@ mtg-mechanics-parser is a rule-based parsing and scoring system for creature car
 
 The project transforms raw card data from [Scryfall](https://scryfall.com/) into structured gameplay features by parsing a card's Oracle text, identifying game mechanics, extracting quantitative features, and assigning a weighted power score.
 
+This project is a continuation on our [previous work](https://github.com/AgentSamSA/Creature-Power-Creep-in-MtG) on scoring creature cards in *Magic: The Gathering*.
+
 Unlike traditional tabular datasets, *Magic* card text encodes structured game rules in natural-language form, including actions, triggered events, costs, restrictions, and continuous effects. As a result, evaluating card strength is a non-trivial task even for experienced *Magic: The Gathering* players, as it requires interpreting mechanics embedded in text rather than explicit structured fields.
 
 Additionally, similar gameplay mechanics can be expressed through many distinct textual patterns. This makes rule-based parsing challenging, requiring a large set of pattern-matching rules and feature-specific extraction logic.
