@@ -14,5 +14,5 @@ def score_card(card: CardFeatures) -> CardScore:
     return CardScore(
         abilities=get_ability_scores(card.abilities),
         keyword=score_keywords(card.keyword_features),
-        pt=score_pt(card.power, card.toughness),
+        pt=score_pt(card.power, card.toughness, card.power_from_cmc),
     )

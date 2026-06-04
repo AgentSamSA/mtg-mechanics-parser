@@ -74,6 +74,15 @@ def build_clean_dataset(
         merged['toughness'], errors='coerce'
     ).fillna(merged['cmc'])
 
+    # Check if power/toughness is derived fallback value
+    merged['power_from_cmc'] = merged['power'].apply(
+        lambda x: not str(x).isdigit()
+    )
+
+    merged['toughness_from_cmc'] = merged['toughness'].apply(
+        lambda x: not str(x).isdigit()
+    )
+
     column_order = [
         'oracle_id',
         'name',

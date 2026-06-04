@@ -20,6 +20,8 @@ class CardFeatures:
 
     power: float
     toughness: float
+    power_from_cmc: bool = False
+    toughness_from_cmc: bool = False
 
 
 def build_card_features(bundle: CardAbilityBundle, row) -> CardFeatures:
@@ -27,5 +29,7 @@ def build_card_features(bundle: CardAbilityBundle, row) -> CardFeatures:
         abilities=bundle.abilities,
         keyword_features=build_keyword_features(row),
         power=row['power_numeric'],
-        toughness=row['toughness_numeric']
+        toughness=row['toughness_numeric'],
+        power_from_cmc=row['power_from_cmc'],
+        toughness_from_cmc=row['toughness_from_cmc']
     )

@@ -19,5 +19,10 @@ def power_bonus(power: float) -> float:
         return 0
 
 
-def score_pt(power: float, toughness: float) -> float:
-    return power + toughness + power_bonus(power)
+def score_pt(power: float, toughness: float, power_from_cmc: bool) -> float:
+    base = power + toughness
+    
+    if power_from_cmc:
+        return base
+    
+    return base + power_bonus(power)
