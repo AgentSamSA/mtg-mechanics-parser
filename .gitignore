@@ -14,3 +14,9 @@ data/*/*.ndjson
 
 # Packaging
 *.egg-info/
+
+# Generated report figures & tables (reproduced by running the notebook)
+notebooks/figures/
+
+# Local backups / scratch
+*.bak
