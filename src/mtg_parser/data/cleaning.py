@@ -95,6 +95,8 @@ def build_clean_dataset(
         'toughness',
         'power_numeric',
         'toughness_numeric',
+        'power_from_cmc',
+        'toughness_from_cmc',
         'keywords',
         'oracle_text',
         'color_identity',
