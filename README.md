@@ -25,6 +25,8 @@ The parser currently analyzes creature cards and detects a wide range of gamepla
 
 The resulting feature representations can be used for card evaluation, dataset analysis, machine learning experiments, and gameplay complexity research.
 
+You can read our paper on this project [here](https://drive.google.com/file/d/1MSvG59g1laxOJRZlKqcCBaDlPtgbkzOY/view?usp=sharing).
+
 ## Why This Project Exists
 
 *Magic: The Gathering* contains tens of thousands of unique cards whose functionality is primarily expressed through natural-language Oracle text.
